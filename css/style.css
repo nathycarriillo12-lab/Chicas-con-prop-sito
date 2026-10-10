@@ -706,3 +706,77 @@ body{font-size:18px!important}
     line-height:1.75!important;
   }
 }
+
+
+/* Sistema unificado de botones VIRTUOSAS inspirado en CTA principal */
+.button,.nav-cta,.scratch-reset,.prayer-form button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.05rem;
+  min-height:56px;
+  padding:.95rem 1.8rem;
+  border-radius:999px;
+  font-family:var(--sans);
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.13em;
+  line-height:1.2;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease,box-shadow .22s ease;
+}
+.button-primary,.nav-cta{
+  background:#704064;
+  border:1px solid #704064;
+  color:#fffaf5;
+}
+.button-primary:hover,.nav-cta:hover{
+  background:#58304f;
+  border-color:#58304f;
+  color:#fffaf5;
+  transform:translateY(-2px);
+}
+.button-primary span,.nav-cta span{
+  display:inline-block;
+  font-size:1.25rem;
+  line-height:1;
+  transition:transform .22s ease;
+}
+.button-primary:hover span{transform:translateY(3px)}
+.button-outline{
+  background:transparent;
+  border:1px solid #C88A35;
+  color:#49384A;
+}
+.button-outline:hover{
+  background:#fffaf5;
+  border-color:#704064;
+  color:#704064;
+  transform:translateY(-2px);
+}
+.button-light{
+  background:#fffaf5;
+  border:1px solid #fffaf5;
+  color:#704064;
+}
+.button-light:hover{
+  background:#f5e7ed;
+  border-color:#f5e7ed;
+  color:#58304f;
+  transform:translateY(-2px);
+}
+.scratch-reset{
+  min-height:0;
+  padding:.55rem 1rem;
+  border:1px solid rgba(112,64,100,.28);
+  background:rgba(255,252,250,.94);
+  color:#704064;
+  font-size:.68rem;
+  letter-spacing:.08em;
+}
+.prayer-form button{background:#704064;color:#fffaf5;border:1px solid #704064}
+@media(max-width:620px){
+  .button,.nav-cta{min-height:52px;padding:.85rem 1.35rem;font-size:.74rem;letter-spacing:.1em}
+}
+@media(prefers-reduced-motion:reduce){.button,.nav-cta,.scratch-reset,.prayer-form button{transition:none}}
