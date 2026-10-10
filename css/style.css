@@ -869,18 +869,29 @@ body{font-size:18px!important}
 
 
 
-/* Hover dorado SOLO para el botón «Conoce lo que estamos construyendo» */
-.text-link.intro-link:hover,
-.text-link.intro-link:focus-visible{
-  color:#C88A35!important;
-  border-color:#C88A35!important;
+
+
+/* Ajustes solicitados: Únete vuelve al botón morado original */
+.nav-cta,.nav-cta:hover,.nav-cta:focus-visible{
+  background:#704064!important;
+  border:1px solid #704064!important;
+  color:#fffaf5!important;
+}
+.nav-cta span,.nav-cta:hover span,.nav-cta:focus-visible span{color:#fffaf5!important}
+/* En «Conoce lo que estamos construyendo»: marco morado y letras doradas al hover */
+.text-link.intro-link:hover,.text-link.intro-link:focus-visible{
   background:#fffaf5!important;
+  border-color:#704064!important;
+  color:#C88A35!important;
 }
 .text-link.intro-link:hover .intro-link-label,
-.text-link.intro-link:focus-visible .intro-link-label,
 .text-link.intro-link:hover .intro-link-arrow,
-.text-link.intro-link:focus-visible .intro-link-arrow{
-  color:#C88A35!important;
-  opacity:1!important;
+.text-link.intro-link:focus-visible .intro-link-label,
+.text-link.intro-link:focus-visible .intro-link-arrow{color:#C88A35!important}
+/* Ocultar el texto guía conforme se descubre el salmo */
+.verse-scratch .scratch-prompt{
+  opacity:clamp(0,calc(1 - var(--scratch-progress, 0)*1.5),1)!important;
+  transition:opacity .06s linear!important;
 }
-/* El botón superior «Únete» conserva el estilo general original */
+.verse-scratch.is-revealed .scratch-prompt,
+.verse-scratch.is-fully-revealed .scratch-prompt{opacity:0!important;visibility:hidden!important}
