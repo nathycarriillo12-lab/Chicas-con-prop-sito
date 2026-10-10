@@ -562,3 +562,13 @@ body{font-size:18px!important}
  .intro .verse-scratch{width:100%;margin-top:2rem;min-height:225px}
  .intro .verse-reveal{min-height:225px}
 }
+
+/* La referencia bíblica solo aparece cuando se descubre toda la promesa */
+.verse-scratch .verse-reveal cite{opacity:0;transition:opacity .35s ease}
+.verse-scratch.is-revealed .verse-reveal cite{opacity:1}
+.verse-scratch .verse-sprig{display:none!important}
+.verse-scratch .scratch-prompt small{font-size:.82rem;letter-spacing:.08em}
+.verse-scratch .scratch-prompt strong{font-size:clamp(1.9rem,2.5vw,2.4rem)}
+.verse-scratch .scratch-prompt span:not(.scratch-star){font-size:1.12rem}
+.verse-scratch .scratch-reset{display:none}
+.verse-scratch.is-revealed .scratch-reset{display:block}
