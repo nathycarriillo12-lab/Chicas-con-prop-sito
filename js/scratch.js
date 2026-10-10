@@ -4,7 +4,10 @@
   const base=cover.getContext('2d');
   let active=false,last=null,revealed=false,particles=[],raf=0,lastSpawn=0;
   let passStart=null,passes=0,travel=0;
-  const brush=() => window.matchMedia('(pointer: coarse)').matches ? 58 : 34;
+  const isTouch=() => window.matchMedia('(pointer: coarse)').matches;
+  const brush=() => isTouch() ? 46 : 27;
+  const passesNeeded=() => isTouch() ? 2 : 4;
+  const passDistance=() => card.clientWidth*(isTouch()?.30:.36);
 
   const spark=document.createElement('canvas');spark.className='scratch-sparkles';spark.setAttribute('aria-hidden','true');card.appendChild(spark);
   const fx=spark.getContext('2d');
@@ -22,20 +25,17 @@
     const w=card.clientWidth,h=card.clientHeight;base.globalCompositeOperation='source-over';base.clearRect(0,0,w,h);
     const g=base.createLinearGradient(0,0,w,h);g.addColorStop(0,'#674367');g.addColorStop(.52,'#8C6D86');g.addColorStop(1,'#A7AF97');base.fillStyle=g;base.fillRect(0,0,w,h);
     for(let i=0;i<Math.max(24,Math.round(w/25));i++){const x=(i*79.13)%w,y=(i*43.71)%h;star(base,x,y,1.1+(i%3)*.45,'#F8E9D5',.7);}
-    card.classList.remove('is-revealed','is-fully-revealed');card.querySelector('.scratch-prompt')?.classList.remove('is-hidden');revealed=false;particles=[];last=null;passes=0;travel=0;passStart=null;fx.clearRect(0,0,w,h);
+    card.classList.remove('is-revealed','is-fully-revealed');card.style.setProperty('--scratch-progress','0');revealed=false;particles=[];last=null;passes=0;travel=0;passStart=null;fx.clearRect(0,0,w,h);
   }
   function pos(e){const r=cover.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
   function burst(x,y,n=10){
     const colors=['#FFF6D5','#F5DCE3','#FFFFFF','#DCC5F0','#E8D9AF'];
     for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,s=.3+Math.random()*2;
-      particles.push({x:x+(Math.random()-.5)*brush()*.9,y:y+(Math.random()-.5)*brush*.9,vx:Math.cos(a)*s,vy:Math.sin(a)*s-.35,r:1+Math.random()*2.5,life:25+Math.random()*22,max:47,color:colors[Math.floor(Math.random()*colors.length)]});}
+      particles.push({x:x+(Math.random()-.5)*brush()*.9,y:y+(Math.random()-.5)*brush()*.9,vx:Math.cos(a)*s,vy:Math.sin(a)*s-.35,r:1+Math.random()*2.5,life:25+Math.random()*22,max:47,color:colors[Math.floor(Math.random()*colors.length)]});}
     if(!raf)raf=requestAnimationFrame(animate);
   }
   function reveal(p){
     if(revealed)return;
-    // The prompt is HTML above the canvas, so hide it as soon as the wand starts moving.
-    // This prevents its white lettering from floating over the revealed verse.
-    card.querySelector('.scratch-prompt')?.classList.add('is-hidden');
     const count=last?Math.max(1,Math.ceil(Math.hypot(p.x-last.x,p.y-last.y)/8)):1;
     base.save();base.globalCompositeOperation='destination-out';
     for(let i=0;i<=count;i++){
@@ -47,13 +47,16 @@
     base.restore();last=p;
     const now=performance.now();if(now-lastSpawn>45){burst(p.x,p.y,16);lastSpawn=now;}
     if(passStart)travel+=Math.hypot(p.x-passStart.x,p.y-passStart.y);
+    const progress=Math.min(0.94,(passes+Math.min(1,travel/passDistance()))/passesNeeded());
+    card.style.setProperty('--scratch-progress',String(progress));
     passStart=p;
   }
   function finishPass(){
-    if(passStart&&travel>card.clientWidth*(window.matchMedia('(pointer: coarse)').matches?.22:.48)){
+    if(passStart&&travel>passDistance()){
       passes++;
-      card.style.setProperty('--scratch-progress',Math.min(1,passes/(window.matchMedia('(pointer: coarse)').matches?2:3)));
-      if(passes>=(window.matchMedia('(pointer: coarse)').matches?2:3))finishReveal();
+      const progress=Math.min(0.94,passes/passesNeeded());
+      card.style.setProperty('--scratch-progress',String(progress));
+      if(passes>=passesNeeded())finishReveal();
     }
     passStart=null;travel=0;last=null;
   }
@@ -71,13 +74,13 @@
       }
     }
     card.classList.add('is-revealed');
-    card.querySelector('.scratch-prompt')?.classList.add('is-hidden');
-    let start=null,duration=1100;
+    card.style.setProperty('--scratch-progress','1');
+    let start=null,duration=1500;
     function dissolve(ts){
       if(!start)start=ts;const t=Math.min(1,(ts-start)/duration);
       base.globalCompositeOperation='destination-out';
       // Fade the remaining cover smoothly; the prompt text is hidden separately.
-      base.fillStyle='rgba(0,0,0,0.10)';base.fillRect(0,0,w,h);
+      base.fillStyle='rgba(0,0,0,0.055)';base.fillRect(0,0,w,h);
       if(t<1)requestAnimationFrame(dissolve);else {base.clearRect(0,0,w,h);card.classList.add('is-fully-revealed');}
     }
     requestAnimationFrame(dissolve);
