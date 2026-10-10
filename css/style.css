@@ -1038,3 +1038,34 @@ body{font-size:18px!important}
 @media (max-width: 760px) {
   .essence-feature-photo { height: clamp(280px, 62vw, 420px) !important; }
 }
+
+
+/* Ajuste final de marco: eliminar los halos blancos entre imagen y arco */
+.hero-photo-frame {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 1px solid #C88A35 !important;
+  overflow: hidden !important;
+}
+.hero-photo-frame > .hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 149px 149px 25px 25px !important;
+}
+.hero-photo-frame > .hero-photo-overlay {
+  inset: 0 !important;
+  border-radius: 149px 149px 25px 25px !important;
+}
+.essence-feature-photo {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 1px solid #C88A35 !important;
+  overflow: hidden !important;
+}
+.essence-feature-photo > img {
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 149px 149px 25px 25px !important;
+}
