@@ -1238,3 +1238,15 @@ body{font-size:18px!important}
   padding: 0 !important;
   text-align: center !important;
 }
+
+
+/* Mantener la referencia bíblica junto al versículo en la capa inferior; la cubierta la oculta hasta raspar */
+.intro .verse-scratch .verse-reveal cite {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: .65rem !important;
+}
