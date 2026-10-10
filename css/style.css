@@ -593,3 +593,30 @@ body{font-size:18px!important}
 .intro-link:hover{background:#5C3A63;color:#fff!important;border-color:#5C3A63;transform:translateY(-2px);box-shadow:0 9px 22px rgba(73,43,71,.14)}
 .intro-link:hover .intro-link-arrow{background:#E9D5E6;color:#5C3A63;transform:translate(2px,-2px)}
 @media(max-width:620px){.intro-link{gap:1rem;padding:.75rem 1rem!important;font-size:.92rem!important}.intro-link .intro-link-arrow{width:1.8rem;height:1.8rem}}
+
+
+/* VIRTUOSAS · Esencia con fotografía y experiencia más dinámica */
+.essence-feature{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);max-width:1100px;margin:0 auto 2.7rem;min-height:350px;background:var(--paper);border:1px solid var(--line);overflow:hidden;border-radius:4px;box-shadow:0 18px 45px rgba(73,56,74,.07)}
+.essence-feature-photo{position:relative;min-height:350px;overflow:hidden;background:#e7e2d9}
+.essence-feature-photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(0deg,rgba(45,35,44,.55),transparent)}
+.essence-feature-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.essence-feature:hover .essence-feature-photo img{transform:scale(1.045)}
+.essence-photo-tag{position:absolute;z-index:1;bottom:1.35rem;left:1.5rem;color:#fff;font-size:.62rem;letter-spacing:.18em;font-weight:700}
+.essence-feature-copy{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(1.8rem,4vw,3.5rem);background:linear-gradient(145deg,#FFFCFA 0%,#F5DCE3 100%)}
+.essence-feature-mark{position:absolute;right:1.5rem;top:1rem;color:var(--sage);font-size:2.4rem;opacity:.75}
+.essence-feature-kicker{font-size:.63rem;letter-spacing:.18em;color:var(--terracotta);font-weight:700;margin-bottom:.7rem}
+.essence-feature-copy h3{font:500 clamp(1.9rem,3.4vw,3rem)/1.14 var(--serif);letter-spacing:-.035em;color:var(--brown);margin:0 0 1rem}
+.essence-feature-copy h3 em{font-family:var(--script);font-weight:400;font-size:1.18em;color:var(--sage)}
+.essence-feature-copy>p:not(.essence-feature-kicker){font-size:.88rem;line-height:1.85;color:var(--muted);margin-bottom:1.4rem;max-width:420px}
+.essence-feature-link{display:inline-flex;align-items:center;gap:1.1rem;padding-bottom:.35rem;border-bottom:1px solid var(--sage);font-size:.78rem;font-weight:700;color:var(--terracotta);transition:gap .2s}
+.essence-feature-link:hover{gap:1.55rem}
+.essence-grid{gap:1.15rem}
+.essence-card{position:relative;overflow:hidden;min-height:235px;padding:2rem 2rem 1.8rem;border-radius:4px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.essence-card:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--rose);transform:scaleX(.3);transform-origin:left;transition:transform .3s}
+.essence-card:nth-child(2):before{background:var(--sage)}
+.essence-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(73,56,74,.09);border-color:#d5c1d4}
+.essence-card:hover:before{transform:scaleX(1)}
+.essence-card>span{display:inline-flex;align-items:center;gap:.6rem}
+.essence-card h3{font-size:1.8rem;margin:1rem 0 .7rem}
+@media(max-width:760px){.essence-feature{grid-template-columns:1fr;margin-bottom:2rem}.essence-feature-photo{min-height:270px}.essence-feature-copy{padding:2rem 1.5rem}.essence-feature-copy h3{font-size:2.35rem}.essence-card{min-height:0;padding:1.5rem}}
+@media(prefers-reduced-motion:reduce){.essence-feature-photo img,.essence-card,.essence-feature-link{transition:none}}
