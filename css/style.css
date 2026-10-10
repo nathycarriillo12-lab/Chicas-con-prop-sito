@@ -803,3 +803,34 @@ body{font-size:18px!important}
 .quick-relations .quick-icon{background:#C58DA6}
 .quick-mission{background:#F3E4D4}
 .quick-mission .quick-icon{background:#CDA263}
+
+
+/* CTAs consistentes: píldora clara, borde dorado y flecha descendente */
+.button,.nav-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:1rem;
+  min-height:54px;padding:.9rem 1.65rem;border-radius:999px;
+  background:transparent!important;border:1px solid #C88A35!important;
+  color:#49384A!important;font-family:var(--sans);font-size:.8rem;
+  font-weight:700;letter-spacing:.14em;line-height:1.2;text-transform:uppercase;
+  text-decoration:none;box-shadow:none;transition:background-color .22s ease,color .22s ease,border-color .22s ease,transform .22s ease;
+}
+.button:hover,.nav-cta:hover{
+  background:#fffaf5!important;border-color:#704064!important;color:#704064!important;
+  transform:translateY(-2px);
+}
+.button span,.nav-cta span{display:inline-block;font-size:1.2rem;line-height:1;transition:transform .22s ease}
+.button:hover span,.nav-cta:hover span{transform:translateY(3px)}
+.button-primary,.button-outline,.button-light{background:transparent!important;color:#49384A!important;border-color:#C88A35!important}
+.text-link.intro-link{
+  display:inline-flex;align-items:center;justify-content:center;gap:1rem;
+  min-height:54px;padding:.9rem 1.65rem;border:1px solid #C88A35;border-radius:999px;
+  background:transparent;color:#49384A;font-family:var(--sans);font-size:.8rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .22s ease;
+}
+.text-link.intro-link:hover{background:#fffaf5;border-color:#704064;color:#704064;transform:translateY(-2px)}
+.text-link.intro-link .intro-link-arrow{display:inline-flex;align-items:center;justify-content:center;width:auto;height:auto;background:transparent;color:inherit;font-size:1.2rem;transition:transform .22s ease}
+.text-link.intro-link:hover .intro-link-arrow{transform:translateY(3px)}
+.scratch-prompt{opacity:calc(1 - var(--scratch-progress, 0))!important;transition:opacity .08s linear!important}
+.verse-scratch.is-revealed .scratch-prompt{opacity:0!important}
+@media(max-width:620px){.button,.nav-cta,.text-link.intro-link{min-height:50px;padding:.8rem 1.25rem;font-size:.73rem;letter-spacing:.1em}}
+@media(prefers-reduced-motion:reduce){.button,.nav-cta,.text-link.intro-link,.scratch-prompt{transition:none!important}}
