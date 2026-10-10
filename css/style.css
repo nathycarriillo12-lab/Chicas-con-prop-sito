@@ -1145,3 +1145,10 @@ body{font-size:18px!important}
   opacity: calc(1 - var(--scratch-progress, 0)) !important;
   transition: opacity .05s linear !important;
 }
+
+
+/* Estrella más pequeña, sin alterar la posición del texto */
+.intro .verse-scratch .scratch-prompt > .scratch-star {
+  font-size: 1.05rem !important;
+  text-shadow: 0 0 8px rgba(255,245,214,.3) !important;
+}
