@@ -1123,3 +1123,22 @@ body{font-size:18px!important}
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+
+/* VIRTUOSAS · centrar verticalmente el texto de la cubierta morada */
+.verse-scratch .scratch-prompt {
+  justify-content: center !important;
+  gap: .55rem !important;
+  padding: 1.25rem !important;
+  text-align: center !important;
+}
+.verse-scratch .scratch-prompt .scratch-star {
+  margin-bottom: .1rem;
+}
+.verse-scratch .scratch-prompt strong,
+.verse-scratch .scratch-prompt span:not(.scratch-star),
+.verse-scratch .scratch-prompt small {
+  text-align: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
