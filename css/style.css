@@ -949,7 +949,7 @@ body{font-size:18px!important}
   overflow: hidden;
 }
 .hero-photo {
-  border-radius: 0 !important;
+  border-radius: 145px 145px 22px 22px !important;
 }
 
 
@@ -1008,4 +1008,33 @@ body{font-size:18px!important}
     height: clamp(280px, 62vw, 420px) !important;
     min-height: 0 !important;
   }
+}
+
+
+/* Corrección prioritaria: conservar el arco original en ambas fotos */
+.hero-photo-frame {
+  border: 1px solid #C88A35 !important;
+  border-radius: 150px 150px 26px 26px !important;
+  padding: 5px !important;
+  overflow: hidden !important;
+  background: #FFFCFA !important;
+}
+.hero-photo-frame > .hero-photo {
+  border-radius: 145px 145px 22px 22px !important;
+}
+.essence-feature-photo {
+  border: 1px solid #C88A35 !important;
+  border-radius: 150px 150px 26px 26px !important;
+  padding: 5px !important;
+  overflow: hidden !important;
+  background: #FFFCFA !important;
+}
+.essence-feature-photo > img {
+  border-radius: 145px 145px 22px 22px !important;
+  inset: 5px !important;
+  width: calc(100% - 10px) !important;
+  height: calc(100% - 10px) !important;
+}
+@media (max-width: 760px) {
+  .essence-feature-photo { height: clamp(280px, 62vw, 420px) !important; }
 }
