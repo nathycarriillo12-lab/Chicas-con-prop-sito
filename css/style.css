@@ -1142,3 +1142,27 @@ body{font-size:18px!important}
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+
+/* Ajuste real de composición: la estrella queda arriba y las tres líneas se centran juntas */
+.intro .verse-scratch .scratch-prompt {
+  justify-content: center !important;
+  gap: .5rem !important;
+  padding: 1.1rem 1rem !important;
+}
+.intro .verse-scratch .scratch-prompt .scratch-star {
+  position: absolute !important;
+  top: 14% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+}
+.intro .verse-scratch .scratch-prompt strong {
+  margin-top: 2.1rem !important;
+  text-align: center !important;
+}
+.intro .verse-scratch .scratch-prompt span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt small {
+  text-align: center !important;
+  margin: 0 !important;
+}
