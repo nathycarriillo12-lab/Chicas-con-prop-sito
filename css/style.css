@@ -1371,3 +1371,46 @@ body{font-size:18px!important}
     z-index: 1;
   }
 }
+
+
+/* Unión real foto + tarjeta: compartir fondo, suavizar esquina superior y eliminar el hueco inferior */
+@media (min-width: 761px) {
+  .essence-feature {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr) !important;
+    gap: 0 !important;
+    background: #F5DCE3 !important;
+    overflow: visible !important;
+  }
+  .essence-feature-photo {
+    border-radius: 150px 150px 0 0 !important;
+    border-bottom: 0 !important;
+    background: #F5DCE3 !important;
+    overflow: hidden !important;
+  }
+  .essence-feature-photo > img {
+    border-radius: 149px 149px 0 0 !important;
+  }
+  .essence-feature-copy {
+    background: linear-gradient(145deg, #F8F5F0 0%, #F7E8EC 20%, #F5DCE3 56%, #F5DCE3 100%) !important;
+    position: relative !important;
+    isolation: isolate !important;
+  }
+  .essence-feature-copy::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: -42px !important;
+    width: 58px !important;
+    background: linear-gradient(90deg, rgba(245,220,227,0) 0%, rgba(247,232,236,.82) 48%, #F5DCE3 100%) !important;
+  }
+  .essence-feature-copy > * {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
