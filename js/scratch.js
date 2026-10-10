@@ -47,7 +47,7 @@
     base.restore();last=p;
     const now=performance.now();if(now-lastSpawn>45){burst(p.x,p.y,16);lastSpawn=now;}
     if(passStart)travel+=Math.hypot(p.x-passStart.x,p.y-passStart.y);
-    const progress=Math.min(0.94,(passes+Math.min(1,travel/passDistance()))/passesNeeded());
+    const progress=Math.min(1,(passes+Math.min(1,travel/passDistance()))/passesNeeded());
     card.style.setProperty('--scratch-progress',String(progress));
     passStart=p;
   }
