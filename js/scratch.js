@@ -68,11 +68,14 @@
       }
     }
     card.classList.add('is-revealed');
-    let start=null,duration=850;
+    card.querySelector('.scratch-prompt')?.classList.add('is-hidden');
+    let start=null,duration=1100;
     function dissolve(ts){
       if(!start)start=ts;const t=Math.min(1,(ts-start)/duration);
-      base.globalCompositeOperation='destination-out';base.fillStyle='rgba(0,0,0,'+(0.08+t*.25)+')';base.fillRect(0,0,w,h);
-      if(t<1)requestAnimationFrame(dissolve);else base.clearRect(0,0,w,h);
+      base.globalCompositeOperation='destination-out';
+      // Fade the remaining cover smoothly; the prompt text is hidden separately.
+      base.fillStyle='rgba(0,0,0,0.10)';base.fillRect(0,0,w,h);
+      if(t<1)requestAnimationFrame(dissolve);else {base.clearRect(0,0,w,h);card.classList.add('is-fully-revealed');}
     }
     requestAnimationFrame(dissolve);
   }
