@@ -1209,3 +1209,9 @@ body{font-size:18px!important}
 .intro .verse-scratch .scratch-prompt strong {
   margin-top: 0 !important;
 }
+
+
+/* Refinamiento visual: dar más aire entre la estrella y el texto de la cubierta */
+.intro .verse-scratch .scratch-prompt .scratch-star {
+  top: 5% !important;
+}
