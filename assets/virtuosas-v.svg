@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 210" role="img" aria-labelledby="title">
+<title id="title">Monograma V botánico de Virtuosas</title>
+<defs>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF7C"/><stop offset="1" stop-color="#B98B52"/></linearGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B8BDA8"/><stop offset="1" stop-color="#8C9A7E"/></linearGradient>
+ <linearGradient id="blush" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8E7E7"/><stop offset="1" stop-color="#C9A7C5"/></linearGradient>
+</defs>
+<path d="M18 42H67C56 45 56 53 62 68L90 145L118 68C124 53 123 45 112 42H163V47H149C140 47 136 53 130 69L94 170H85L47 69C41 53 37 47 28 47H18Z" fill="#383638"/>
+<g fill="none" stroke="url(#gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M89 174C91 145 98 117 103 89S110 45 121 18"/>
+ <path d="M99 125C78 116 61 101 50 81"/>
+ <path d="M105 97C126 89 142 75 151 59"/>
+ <path d="M95 145C116 140 133 128 146 112"/>
+ <path d="M109 67C94 58 86 44 84 30"/>
+</g>
+<g stroke="#8C7A68" stroke-width="1.1" stroke-linejoin="round">
+ <path d="M97 115C77 108 65 91 51 80C70 78 90 91 97 115Z" fill="url(#leaf)"/>
+ <path d="M105 98C121 79 138 71 151 59C148 80 129 96 105 98Z" fill="url(#leaf)"/>
+ <path d="M102 146C119 129 134 121 146 112C143 132 123 145 102 146Z" fill="url(#leaf)"/>
+ <path d="M109 68C91 58 85 43 84 30C101 40 110 52 109 68Z" fill="url(#leaf)"/>
+ <path d="M118 49C105 42 105 28 110 18C122 27 125 38 118 49Z" fill="url(#blush)"/>
+ <path d="M120 48C123 31 136 23 147 21C145 36 134 46 120 48Z" fill="url(#blush)"/>
+ <path d="M117 55C126 44 141 44 151 50C140 61 127 63 117 55Z" fill="url(#blush)"/>
+</g>
+<g fill="none" stroke="url(#gold)" stroke-width="1.2" stroke-linecap="round">
+ <path d="M120 49L110 18M120 49L147 21M120 49L151 50M97 115L51 80M105 98L151 59M102 146L146 112"/>
+</g>
+</svg>
