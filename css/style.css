@@ -1265,3 +1265,17 @@ body{font-size:18px!important}
   margin-top: .65rem !important;
   transition: none !important;
 }
+
+
+/* FIX definitivo: mostrar la referencia junto al versículo cuando se raspa la cubierta */
+.intro .verse-scratch .verse-reveal cite,
+.intro .verse-scratch.is-revealed .verse-reveal cite,
+.intro .verse-scratch.is-fully-revealed .verse-reveal cite {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: var(--terracotta) !important;
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: .65rem !important;
+}
