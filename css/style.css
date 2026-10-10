@@ -1215,3 +1215,14 @@ body{font-size:18px!important}
 .intro .verse-scratch .scratch-prompt .scratch-star {
   top: 5% !important;
 }
+
+
+/* V48: subir la estrella decorativa de la tarjeta mágica en móvil */
+@media (max-width: 620px) {
+  .intro.section-shell .verse-scratch .scratch-prompt > .scratch-star {
+    top: 2% !important;
+    left: 50% !important;
+    position: absolute !important;
+    transform: translateX(-50%) !important;
+  }
+}
