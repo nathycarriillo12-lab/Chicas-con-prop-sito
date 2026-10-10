@@ -100,3 +100,28 @@ h1{font-size:clamp(2.7rem,4.65vw,5.1rem);margin:1rem 0 1.1rem}
 .pillars-note{text-align:center;font-size:.78rem;color:var(--muted);margin:1.6rem auto 0;max-width:720px}
 @media(max-width:900px){.pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pillar-card{min-height:230px}}
 @media(max-width:520px){.pillar-grid{grid-template-columns:1fr}.pillar-card{min-height:0;padding:1.3rem}.pillar-symbol{margin:.4rem 0}.pillar-card h3{font-size:1.4rem}}
+
+
+/* Esencia, manifiesto y fundamentos de VIRTUOSAS */
+.essence{padding-top:clamp(3.8rem,7vw,6.5rem);padding-bottom:clamp(3.8rem,7vw,6.5rem)}
+.essence-intro{max-width:850px;margin:0 auto 2.5rem;text-align:center}
+.essence-intro h2{font-size:clamp(2.2rem,4.2vw,4rem);margin:.7rem 0 1.2rem}
+.essence-lead{max-width:680px;margin:0 auto;color:var(--muted);font-size:1rem;line-height:1.85}
+.manifesto{max-width:900px;margin:0 auto 2.4rem;padding:2rem clamp(1.3rem,4vw,3.5rem);background:#efe4d9;border-left:3px solid var(--terracotta)}
+.manifesto-label,.essence-card>span{font-size:.65rem;letter-spacing:.17em;font-weight:700;color:var(--terracotta)}
+.manifesto p:not(.manifesto-label){font:1.03rem/1.9 var(--serif);color:#59453b}
+.essence-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0 auto 2.8rem;max-width:1100px}
+.essence-card{padding:1.7rem;background:var(--paper);border:1px solid var(--line)}
+.essence-card h3{font:500 1.65rem var(--serif);margin:.8rem 0}
+.essence-card p{font-size:.88rem;color:var(--muted);line-height:1.8;margin:0}
+.values-block{max-width:1100px;margin:auto}
+.values-block>.section-kicker{text-align:center;margin-bottom:1.2rem}
+.values-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.values-list>div{padding:1.15rem 1rem;background:rgba(255,253,249,.68);border:1px solid var(--line)}
+.values-list strong,.values-list span{display:block}
+.values-list strong{font:500 1.1rem var(--serif);color:var(--brown);margin-bottom:.35rem}
+.values-list span{font-size:.78rem;line-height:1.65;color:var(--muted)}
+.brand-words strong{letter-spacing:.09em;font-size:1.22rem}
+.footer-brand .brand-words strong{font-size:1.15rem}
+@media(max-width:760px){.essence-grid{grid-template-columns:1fr}.values-list{grid-template-columns:repeat(2,minmax(0,1fr))}.manifesto{padding:1.5rem 1.2rem}}
+@media(max-width:520px){.values-list{grid-template-columns:1fr}.essence-intro h2{font-size:2.35rem}.essence-lead{font-size:.92rem}}
