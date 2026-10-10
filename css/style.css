@@ -1217,12 +1217,20 @@ body{font-size:18px!important}
 }
 
 
-/* V48: subir la estrella decorativa de la tarjeta mágica en móvil */
+
+
+/* Corrección de armonía móvil: estrella en la parte superior, independiente del bloque de texto */
 @media (max-width: 620px) {
-  .intro.section-shell .verse-scratch .scratch-prompt > .scratch-star {
-    top: 2% !important;
+  .intro .verse-scratch .scratch-prompt { position:absolute !important; inset:0 !important; }
+  .intro .verse-scratch .scratch-prompt > .scratch-star {
+    top: 7% !important;
     left: 50% !important;
-    position: absolute !important;
     transform: translateX(-50%) !important;
   }
+  .intro .verse-scratch .scratch-prompt > strong,
+  .intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
+  .intro .verse-scratch .scratch-prompt > small {
+    top: 10px !important;
+  }
+  .intro .verse-scratch .scratch-prompt > strong { margin-top: 0 !important; }
 }
