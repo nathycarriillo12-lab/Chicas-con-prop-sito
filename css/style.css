@@ -907,3 +907,33 @@ body{font-size:18px!important}
   .intro-grid h2,
   .essence-heading h2{font-size:clamp(2.25rem,8vw,3rem);line-height:1.16}
 }
+
+
+/* VIRTUOSAS · lectura cómoda en teléfonos */
+@media (max-width: 760px) {
+  .essence-feature {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .essence-feature-photo {
+    width: 100%;
+    height: clamp(220px, 64vw, 320px);
+    min-height: 0 !important;
+  }
+  .essence-feature-copy {
+    min-width: 0;
+    padding: 1.5rem 1.25rem 1.6rem !important;
+  }
+  .essence-feature-copy h3 {
+    max-width: none;
+    font-size: clamp(2rem, 8.5vw, 2.6rem) !important;
+    line-height: 1.13;
+  }
+  .essence-feature-copy > p:not(.essence-feature-kicker) {
+    max-width: none;
+    font-size: .96rem;
+    line-height: 1.75;
+  }
+}
