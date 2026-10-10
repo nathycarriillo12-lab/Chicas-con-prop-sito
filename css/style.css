@@ -792,3 +792,14 @@ body{font-size:18px!important}
 .quick-pillar:hover>i{background:#704064;color:#fff;transform:translateX(2px)}
 .quick-pillar .quick-arrow-down{font-size:1.35rem}
 .quick-mission:hover>.quick-arrow-down{transform:translateY(2px)}
+
+
+/* Diferenciar con claridad los colores de cada pilar */
+.quick-identity{background:#E9E2F0}
+.quick-identity .quick-icon{background:#9A86AE}
+.quick-character{background:#E7E7DD}
+.quick-character .quick-icon{background:#899078}
+.quick-relations{background:#F5DCE3}
+.quick-relations .quick-icon{background:#C58DA6}
+.quick-mission{background:#F3E4D4}
+.quick-mission .quick-icon{background:#CDA263}
