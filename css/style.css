@@ -971,3 +971,41 @@ body{font-size:18px!important}
   object-fit: cover;
   border-radius: 145px 145px 22px 22px;
 }
+
+
+/* VIRTUOSAS · marco arqueado coherente en las dos fotografías principales */
+.hero-photo-frame {
+  border: 1px solid #C88A35 !important;
+  border-radius: 150px 150px 26px 26px !important;
+  padding: 5px !important;
+  background: #FFFCFA !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+.hero-photo {
+  border-radius: 145px 145px 22px 22px !important;
+}
+.essence-feature-photo {
+  box-sizing: border-box;
+  border: 1px solid #C88A35 !important;
+  border-radius: 150px 150px 26px 26px !important;
+  padding: 5px !important;
+  background: #FFFCFA !important;
+  min-height: 0 !important;
+  height: clamp(350px, 38vw, 480px);
+  overflow: hidden;
+}
+.essence-feature-photo img {
+  box-sizing: border-box;
+  border-radius: 145px 145px 22px 22px !important;
+  inset: 5px !important;
+  width: calc(100% - 10px) !important;
+  height: calc(100% - 10px) !important;
+  object-fit: cover;
+}
+@media (max-width: 760px) {
+  .essence-feature-photo {
+    height: clamp(280px, 62vw, 420px) !important;
+    min-height: 0 !important;
+  }
+}
