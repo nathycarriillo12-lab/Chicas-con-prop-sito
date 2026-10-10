@@ -572,3 +572,8 @@ body{font-size:18px!important}
 .verse-scratch .scratch-prompt span:not(.scratch-star){font-size:1.12rem}
 .verse-scratch .scratch-reset{display:none}
 .verse-scratch.is-revealed .scratch-reset{display:block}
+
+/* Ocultar por completo el texto de invitación al terminar el revelado */
+.verse-scratch .scratch-prompt{transition:opacity .2s ease}
+.verse-scratch .scratch-prompt.is-hidden,
+.verse-scratch.is-fully-revealed .scratch-prompt{opacity:0!important;visibility:hidden!important}
