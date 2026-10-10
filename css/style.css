@@ -585,3 +585,11 @@ body{font-size:18px!important}
 .verse-scratch .verse-reveal cite{opacity:0!important;visibility:hidden!important}
 .verse-scratch.is-fully-revealed .verse-reveal cite{opacity:1!important;visibility:visible!important}
 .verse-scratch .verse-sprig{display:none!important}
+
+/* Bienvenida: énfasis tipográfico y CTA editorial */
+.intro-text p strong{font-weight:700;color:#492B47}
+.intro-link{display:inline-flex!important;align-items:center;justify-content:space-between;gap:1.4rem;margin-top:.5rem;padding:.9rem 1.2rem!important;border:1px solid rgba(92,58,99,.28);border-radius:999px;background:rgba(255,255,255,.48);color:#5C3A63!important;text-decoration:none!important;font-size:.98rem!important;line-height:1.2;transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;box-shadow:0 5px 16px rgba(73,43,71,.05)}
+.intro-link .intro-link-arrow{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:#5C3A63;color:#fff;font-size:1.05rem;transition:transform .25s ease,background .25s ease}
+.intro-link:hover{background:#5C3A63;color:#fff!important;border-color:#5C3A63;transform:translateY(-2px);box-shadow:0 9px 22px rgba(73,43,71,.14)}
+.intro-link:hover .intro-link-arrow{background:#E9D5E6;color:#5C3A63;transform:translate(2px,-2px)}
+@media(max-width:620px){.intro-link{gap:1rem;padding:.75rem 1rem!important;font-size:.92rem!important}.intro-link .intro-link-arrow{width:1.8rem;height:1.8rem}}
