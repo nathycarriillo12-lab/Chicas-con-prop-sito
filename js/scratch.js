@@ -22,7 +22,7 @@
     const w=card.clientWidth,h=card.clientHeight;base.globalCompositeOperation='source-over';base.clearRect(0,0,w,h);
     const g=base.createLinearGradient(0,0,w,h);g.addColorStop(0,'#674367');g.addColorStop(.52,'#8C6D86');g.addColorStop(1,'#A7AF97');base.fillStyle=g;base.fillRect(0,0,w,h);
     for(let i=0;i<Math.max(24,Math.round(w/25));i++){const x=(i*79.13)%w,y=(i*43.71)%h;star(base,x,y,1.1+(i%3)*.45,'#F8E9D5',.7);}
-    card.classList.remove('is-revealed');revealed=false;particles=[];last=null;passes=0;travel=0;passStart=null;fx.clearRect(0,0,w,h);
+    card.classList.remove('is-revealed','is-fully-revealed');card.querySelector('.scratch-prompt')?.classList.remove('is-hidden');revealed=false;particles=[];last=null;passes=0;travel=0;passStart=null;fx.clearRect(0,0,w,h);
   }
   function pos(e){const r=cover.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
   function burst(x,y,n=10){
