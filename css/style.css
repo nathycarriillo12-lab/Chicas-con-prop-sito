@@ -1295,3 +1295,24 @@ body{font-size:18px!important}
   color: #FFFFFF !important;
   border-color: #452B4B !important;
 }
+
+
+/* Sección «Lo que nos une»: suavizar la unión del arco con la tarjeta rosa sin mover texto ni bloques */
+@media (min-width: 761px) {
+  .essence-feature-copy {
+    position: relative !important;
+    isolation: isolate;
+    background: linear-gradient(115deg, #F8F5F0 0%, #F7F0F0 10%, #F5DCE3 38%, #F5DCE3 100%) !important;
+  }
+  .essence-feature-copy::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: min(42%, 175px);
+    height: 145px;
+    background: radial-gradient(ellipse at top left, #F8F5F0 0%, rgba(248,245,240,.88) 22%, rgba(248,245,240,.42) 52%, rgba(248,245,240,0) 100%);
+  }
+}
