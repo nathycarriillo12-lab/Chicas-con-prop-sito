@@ -937,3 +937,17 @@ body{font-size:18px!important}
     line-height: 1.75;
   }
 }
+
+
+/* Unificar el marco de la fotografía con el de la primera sección */
+.hero-photo-frame {
+  border: 1px solid var(--line) !important;
+  border-radius: 5px !important;
+  padding: 0 !important;
+  background: var(--paper) !important;
+  box-shadow: 0 14px 38px rgba(73,56,74,.055) !important;
+  overflow: hidden;
+}
+.hero-photo {
+  border-radius: 0 !important;
+}
