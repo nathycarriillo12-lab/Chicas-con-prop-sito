@@ -18,7 +18,7 @@ prayerForm?.addEventListener('submit', event => {
   const name = String(data.get('name') || '').trim();
   const email = String(data.get('email') || '').trim();
   const message = String(data.get('message') || '').trim();
-  const subject = encodeURIComponent('Petición de oración — Soltería con Propósito');
+  const subject = encodeURIComponent('Petición de oración — VIRTUOSAS');
   const body = encodeURIComponent(
     (name ? 'Nombre: ' + name + '\n' : '') +
     'Correo: ' + email + '\n\nPetición de oración:\n' + message
