@@ -1110,3 +1110,32 @@ body{font-size:18px!important}
   z-index: 1;
   margin-top: .75rem;
 }
+
+
+/* Contenedor mágico: mostrar la cita bíblica completa antes de raspar */
+.verse-scratch .scratch-prompt {
+  box-sizing: border-box;
+  padding: 1.5rem 1.25rem;
+  gap: .65rem;
+}
+.verse-scratch .scratch-prompt strong {
+  display: block;
+  max-width: 760px;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.5vw, 2rem) !important;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: center;
+}
+.verse-scratch .scratch-prompt .scratch-reference {
+  font-family: var(--sans);
+  font-size: .72rem !important;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--terracotta);
+}
+.verse-scratch .scratch-prompt small {
+  font-size: .72rem !important;
+}
