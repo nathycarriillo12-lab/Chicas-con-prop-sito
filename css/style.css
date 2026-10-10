@@ -1069,3 +1069,31 @@ body{font-size:18px!important}
   height: 100% !important;
   border-radius: 149px 149px 25px 25px !important;
 }
+
+
+/* Quitar el borde claro exterior de la tarjeta de la fotografía y el texto */
+.essence-feature {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+/* El marco dorado debe pertenecer a la foto, no a una caja blanca exterior */
+.essence-feature-photo {
+  border: 1px solid #C88A35 !important;
+  border-radius: 150px 150px 26px 26px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  overflow: hidden !important;
+}
+.essence-feature-photo > img {
+  display: block;
+  border: 0 !important;
+  margin: 0 !important;
+  border-radius: 149px 149px 25px 25px !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
