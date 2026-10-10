@@ -1197,3 +1197,15 @@ body{font-size:18px!important}
 @media (max-width: 620px) {
   .intro .verse-scratch .scratch-prompt strong { margin-top: 1.35rem !important; }
 }
+
+
+/* Ajuste de posición solicitado: subir el bloque de las tres líneas, sin mover la estrella ni cambiar la cubierta */
+.intro .verse-scratch .scratch-prompt strong,
+.intro .verse-scratch .scratch-prompt span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt small {
+  position: relative !important;
+  top: -34px !important;
+}
+.intro .verse-scratch .scratch-prompt strong {
+  margin-top: 0 !important;
+}
