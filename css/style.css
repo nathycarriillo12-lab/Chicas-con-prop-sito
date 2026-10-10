@@ -1414,3 +1414,49 @@ body{font-size:18px!important}
     z-index: 1 !important;
   }
 }
+
+
+/* Corrección visual de unión: foto y tarjeta con la misma altura, sin halos ni cortes */
+@media (min-width: 761px) {
+  .essence-feature {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr) !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    background: #F5DCE3 !important;
+    overflow: visible !important;
+  }
+  .essence-feature-photo {
+    align-self: stretch !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    border-radius: 150px 150px 0 0 !important;
+    border: 1px solid #C88A35 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    background: #F5DCE3 !important;
+    overflow: hidden !important;
+  }
+  .essence-feature-photo > img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 149px 149px 0 0 !important;
+    object-fit: cover !important;
+  }
+  .essence-feature-photo:before { display: none !important; }
+  .essence-feature-photo:after {
+    inset: 35% 0 0 !important;
+    background: linear-gradient(0deg, rgba(45,35,44,.48), transparent 100%) !important;
+  }
+  .essence-feature-copy {
+    align-self: stretch !important;
+    min-width: 0 !important;
+    background: linear-gradient(90deg, #F5DCE3 0%, #F5DCE3 100%) !important;
+    position: relative !important;
+    isolation: auto !important;
+  }
+  .essence-feature-copy:before { display: none !important; content: none !important; }
+}
