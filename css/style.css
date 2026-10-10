@@ -1097,3 +1097,16 @@ body{font-size:18px!important}
   height: 100% !important;
   object-fit: cover;
 }
+
+
+/* VIRTUOSAS: mostrar siempre la referencia bíblica junto al versículo */
+.verse-scratch .verse-reveal cite,
+.verse-scratch.is-revealed .verse-reveal cite,
+.verse-scratch.is-fully-revealed .verse-reveal cite {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 1;
+  margin-top: .75rem;
+}
