@@ -4,7 +4,7 @@
   const base=cover.getContext('2d');
   let active=false,last=null,revealed=false,particles=[],raf=0,lastSpawn=0;
   let passStart=null,passes=0,travel=0;
-  const brush=34;
+  const brush=() => window.matchMedia('(pointer: coarse)').matches ? 58 : 34;
 
   const spark=document.createElement('canvas');spark.className='scratch-sparkles';spark.setAttribute('aria-hidden','true');card.appendChild(spark);
   const fx=spark.getContext('2d');
@@ -28,7 +28,7 @@
   function burst(x,y,n=10){
     const colors=['#FFF6D5','#F5DCE3','#FFFFFF','#DCC5F0','#E8D9AF'];
     for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,s=.3+Math.random()*2;
-      particles.push({x:x+(Math.random()-.5)*brush*.9,y:y+(Math.random()-.5)*brush*.9,vx:Math.cos(a)*s,vy:Math.sin(a)*s-.35,r:1+Math.random()*2.5,life:25+Math.random()*22,max:47,color:colors[Math.floor(Math.random()*colors.length)]});}
+      particles.push({x:x+(Math.random()-.5)*brush()*.9,y:y+(Math.random()-.5)*brush*.9,vx:Math.cos(a)*s,vy:Math.sin(a)*s-.35,r:1+Math.random()*2.5,life:25+Math.random()*22,max:47,color:colors[Math.floor(Math.random()*colors.length)]});}
     if(!raf)raf=requestAnimationFrame(animate);
   }
   function reveal(p){
@@ -41,7 +41,7 @@
     for(let i=0;i<=count;i++){
       const t=i/count,x=last?last.x+(p.x-last.x)*t:p.x,y=last?last.y+(p.y-last.y)*t:p.y;
       // Broad, soft brush made of many small particles; no hard circular scratch
-      for(let j=0;j<100;j++){const a=Math.random()*Math.PI*2,d=Math.sqrt(Math.random())*brush,r=.8+Math.random()*3.4;base.beginPath();base.arc(x+Math.cos(a)*d,y+Math.sin(a)*d,r,0,Math.PI*2);base.fill();}
+      for(let j=0;j<100;j++){const a=Math.random()*Math.PI*2,d=Math.sqrt(Math.random())*brush(),r=.8+Math.random()*3.4;base.beginPath();base.arc(x+Math.cos(a)*d,y+Math.sin(a)*d,r,0,Math.PI*2);base.fill();}
       if(Math.random()>.25)burst(x,y,4);
     }
     base.restore();last=p;
@@ -50,10 +50,10 @@
     passStart=p;
   }
   function finishPass(){
-    if(passStart&&travel>card.clientWidth*.48){
+    if(passStart&&travel>card.clientWidth*(window.matchMedia('(pointer: coarse)').matches?.22:.48)){
       passes++;
-      card.style.setProperty('--scratch-progress',Math.min(1,passes/3));
-      if(passes>=3)finishReveal();
+      card.style.setProperty('--scratch-progress',Math.min(1,passes/(window.matchMedia('(pointer: coarse)').matches?2:3)));
+      if(passes>=(window.matchMedia('(pointer: coarse)').matches?2:3))finishReveal();
     }
     passStart=null;travel=0;last=null;
   }
