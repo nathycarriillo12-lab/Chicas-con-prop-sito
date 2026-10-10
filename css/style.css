@@ -278,3 +278,49 @@ h1 em,h2 em,.visual-book i{font-family:"Cormorant Garamond",Georgia,serif;font-s
 .pillar-card{box-shadow:0 8px 24px rgba(73,56,74,.035)}
 @media(max-width:900px){.hero-photo-frame{height:min(112vw,550px)}}
 @media(max-width:620px){.photo-gallery-uniform{grid-template-columns:1fr;gap:1rem}.photo-gallery-uniform .photo-tile{aspect-ratio:4/3}.hero-photo-frame{height:112vw;min-height:390px;max-height:510px}}
+
+
+/* VIRTUOSAS — composición basada en la referencia aprobada */
+:root{--cream:#F8F5F0;--paper:#FFFCFA;--blush:#F5DCE3;--rose:#C9A7C5;--terracotta:#5C3A63;--brown:#49384A;--sage:#8C9A7E;--gold:#C88A35;--ink:#332A35;--muted:#776B79;--line:#E8DDE8;--serif:"Cormorant Garamond",Georgia,serif;--script:"Cormorant Garamond",Georgia,serif}
+body{background:#F8F5F0}
+.site-header{height:104px;padding:0 clamp(1rem,4vw,4rem);background:rgba(248,245,240,.97);border-bottom:0}
+.brand{gap:12px}.brand-emblem{position:relative;font:italic 5rem/.8 "Cormorant Garamond",serif;color:#5C3A63;width:72px;text-align:center}.brand-emblem>span{position:absolute;font:1.6rem Georgia,serif;color:#C9A7C5;left:33px;top:-7px;transform:rotate(-20deg)}
+.brand-words strong{font:500 clamp(1.7rem,2.5vw,3rem)/.9 "Cormorant Garamond",serif;letter-spacing:-.035em;color:#492b47}
+.brand-words small{font-size:.57rem;line-height:1.5;letter-spacing:.29em;text-align:center;color:#6d5669}
+.site-nav{gap:clamp(.65rem,2.2vw,2.3rem);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#49384A}
+.site-nav>a:not(.nav-cta){padding:.8rem 0;border-bottom:1px solid transparent}.site-nav>a:not(.nav-cta):hover{border-color:#C88A35}
+.nav-cta{background:#6C3F61;color:white;border:0;border-radius:999px;padding:1rem 1.7rem;letter-spacing:.17em}.nav-cta span{font-size:1rem;margin-left:.6rem}
+.hero-reference{padding:16px clamp(1.25rem,7vw,7rem) 22px;grid-template-columns:.9fr 1.1fr;gap:4.2vw;align-items:center;max-width:1700px}
+.hero-reference .hero-copy{padding:0 0 12px}
+.hero-reference .eyebrow{font-size:.63rem;font-weight:500;letter-spacing:.24em;color:#95868f;gap:9px;display:flex;flex-wrap:wrap}
+.hero-reference .eyebrow span{width:auto;height:auto;background:none}
+.hero-reference h1{font-size:clamp(3.6rem,5.6vw,6.3rem);line-height:.88;letter-spacing:-.055em;color:#492b47;margin:1.3rem 0 1.6rem}
+.hero-reference h1 em{font-style:italic;color:#818873;font-size:1em}
+.hero-reference .hero-lead{font-size:clamp(.95rem,1.25vw,1.18rem);line-height:1.55;color:#49384A;max-width:560px}
+.hero-reference .hero-actions{gap:.8rem;margin-top:1.35rem}
+.hero-reference .button{border-radius:999px;padding:1rem 1.6rem;text-transform:uppercase;letter-spacing:.15em;font-size:.67rem}
+.hero-reference .button-primary{background:#6C3F61}
+.hero-reference .button-outline{border:1px solid #C88A35;background:transparent;color:#49384A}
+.hero-photo-frame{height:clamp(350px,33vw,520px);border:1px solid #C88A35;border-radius:150px 150px 26px 26px;padding:5px;background:#FFFCFA;box-shadow:none}
+.hero-photo{border-radius:145px 145px 22px 22px;object-position:center 38%}
+.hero-photo-overlay{display:none}
+.quick-pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:0 clamp(1.25rem,2.1vw,2.1rem) 28px}
+.quick-pillar{min-height:180px;display:grid;grid-template-columns:68px 1fr 38px;align-items:start;gap:16px;padding:24px 18px;background:#F0DDE5;border-radius:14px;color:#49384A;position:relative;overflow:hidden;transition:transform .2s}
+.quick-pillar:hover{transform:translateY(-3px)}
+.quick-pillar:after{content:"";position:absolute;width:100px;height:100px;border:1px solid #C9A7C5;border-radius:100% 0 100% 0;opacity:.45;left:-25px;bottom:-68px;transform:rotate(35deg)}
+.quick-character{background:#E7E7DD}.quick-relations{background:#F5DCE3}.quick-mission{background:#F3E4D4}
+.quick-icon{width:68px;height:68px;border-radius:50%;background:#B58AA8;color:white;display:grid;place-items:center;font:2rem "Cormorant Garamond",serif}
+.quick-character .quick-icon{background:#899078}.quick-relations .quick-icon{background:#C58DA6}.quick-mission .quick-icon{background:#CDA263}
+.quick-pillar strong{display:block;font-size:.8rem;line-height:1.65;letter-spacing:.15em;text-transform:uppercase;font-weight:500;margin:.55rem 0 1rem}
+.quick-pillar small{font:1rem/1.45 "Cormorant Garamond",Georgia,serif;color:#655461}
+.quick-pillar i{width:38px;height:38px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:1.1rem;margin-top:15px}
+.intro{padding-top:2rem}
+.intro-grid{gap:5vw}.intro h2,.section-heading h2,.prayer h2,.community h2{color:#492b47}
+.section-kicker{letter-spacing:.22em;color:#8C7B88}
+.verse-card{border-radius:18px;background:linear-gradient(110deg,#F5DCE3,#F8F5F0 55%,#E7E7DD);border:1px solid #E9D8E2;border-left:1px solid #E9D8E2}
+.essence-card,.pillar-card,.resource-card{border-radius:14px;box-shadow:0 8px 28px rgba(73,56,74,.045)}
+.community{background:linear-gradient(115deg,#5C3A63,#765C78);border-radius:0}
+.closing-verse{background:linear-gradient(110deg,#F5DCE3,#F8F5F0 50%,#E7E7DD)}
+.site-footer{border-top:1px solid #E8DDE8}
+@media(max-width:1000px){.site-header{height:auto;min-height:90px;flex-wrap:wrap;padding:14px 22px}.site-nav{gap:14px;flex-wrap:wrap;justify-content:center}.hero-reference{grid-template-columns:1fr 1fr}.hero-reference h1{font-size:clamp(3rem,6vw,4.7rem)}.quick-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-pillar{min-height:155px}}
+@media(max-width:620px){.site-header{justify-content:center;gap:14px}.brand-emblem{font-size:3.8rem;width:50px}.brand-emblem>span{font-size:1.2rem;left:25px;top:-5px}.brand-words strong{font-size:1.8rem}.brand-words small{font-size:.48rem}.site-nav{width:100%;gap:10px 16px;font-size:.58rem}.nav-cta{padding:.65rem .9rem}.hero-reference{grid-template-columns:1fr;padding-top:20px;gap:25px}.hero-reference h1{font-size:clamp(3.3rem,13vw,5rem)}.hero-photo-frame{height:75vw;min-height:300px;max-height:430px;order:2}.quick-pillars{grid-template-columns:1fr;padding:0 16px 22px;gap:10px}.quick-pillar{min-height:145px;grid-template-columns:58px 1fr 36px;padding:18px 14px}.quick-icon{width:58px;height:58px}.quick-pillar strong{margin-top:.2rem}.intro{padding-top:2rem}}
