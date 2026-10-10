@@ -128,3 +128,88 @@ h1{font-size:clamp(2.7rem,4.65vw,5.1rem);margin:1rem 0 1.1rem}
 
 /* VIRTUOSAS visual identity refinement */
 .brand-mark{position:relative;display:inline-flex;align-items:center;justify-content:center;width:43px;height:48px;color:var(--terracotta);font-family:var(--serif);font-size:2.8rem;line-height:1}.brand-v{display:block;font:500 2.8rem/1 var(--serif);transform:translateY(-1px)}.brand-flower{position:absolute;right:-2px;top:-1px;font:1.15rem/1 var(--sans);color:#B77E99}.brand-words small{letter-spacing:.13em;font-size:.55rem}
+
+
+/* VIRTUOSAS · paleta completa presente en toda la experiencia */
+:root{
+  --cream:#F8F5F0; --paper:#FFFCFA; --blush:#F5DCE3; --rose:#C9A7C5;
+  --terracotta:#5C3A63; --brown:#49384A; --sage:#8C9A7E; --ink:#332A35;
+  --muted:#776B79; --line:#E5D9E2; --gold:#D4AF7C;
+}
+.site-header{background:rgba(248,245,240,.96);border-bottom-color:#DCC8D7}
+.site-nav{color:var(--brown)}
+.nav-cta{border-color:var(--sage);color:var(--terracotta);background:rgba(140,154,126,.09)}
+.eyebrow span{background:var(--gold)}
+.button-primary{background:var(--terracotta)}
+.button-primary:hover{background:#49304D}
+.text-link{border-bottom-color:var(--gold)}
+.hero-art{background:linear-gradient(145deg,#F5DCE3 0%,#C9A7C5 38%,#8C9A7E 74%,#D4AF7C 100%)}
+.art-sun{background:#F4E3C9}
+.art-leaf{color:#65765D}
+.bible-page{border-color:var(--gold)}
+.intro{position:relative}
+.verse-card{background:linear-gradient(120deg,#F5DCE3 0%,#F8F5F0 55%,#E4E8DF 100%);border-left:4px solid var(--rose)}
+.quote-mark{color:var(--rose)}
+.verse-card cite{color:var(--terracotta)}
+.verse-sprig{color:var(--sage)}
+.essence{position:relative}
+.essence-intro{max-width:850px;margin:0 auto 3rem;text-align:center}
+.essence-intro h2{font-size:clamp(2.5rem,4.5vw,4.4rem);margin:.6rem 0 1rem}
+.essence-intro h2 em{color:var(--sage)}
+.essence-lead{max-width:690px;margin:0 auto;color:var(--muted)}
+.manifesto{max-width:980px;margin:0 auto 3rem;padding:2.2rem 2.5rem;background:linear-gradient(110deg,#F5DCE3,#FFFCFA 58%,#E4E8DF);border-left:3px solid var(--gold)}
+.manifesto-label{font-size:.67rem;letter-spacing:.2em;color:var(--terracotta);font-weight:700}
+.manifesto p:last-child{margin-bottom:0;color:var(--muted)}
+.essence-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.essence-card{padding:2rem;background:#FFFCFA;border:1px solid var(--line);border-top:4px solid var(--rose)}
+.essence-card:nth-child(2){background:#EEF0E9;border-top-color:var(--sage)}
+.essence-card>span{font-size:.66rem;letter-spacing:.18em;color:var(--terracotta)}
+.essence-card h3{font:500 1.8rem var(--serif);margin:1rem 0 .7rem}
+.essence-card p{font-size:.9rem;color:var(--muted);margin-bottom:0}
+.values-block{margin-top:4rem}
+.values-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:1.5rem}
+.values-list>div{padding:1.4rem;background:#FFFCFA;display:grid;gap:.45rem}
+.values-list>div:nth-child(2),.values-list>div:nth-child(5){background:#F5DCE3}
+.values-list>div:nth-child(3),.values-list>div:nth-child(4){background:#EEF0E9}
+.values-list strong{font:500 1.1rem var(--serif);color:var(--brown)}
+.values-list span{font-size:.78rem;color:var(--muted)}
+.pillars{background:linear-gradient(180deg,#F8F5F0 0%,#F3E8F0 100%)}
+.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.pillar-card{position:relative;padding:1.7rem 1.35rem;background:#FFFCFA;border:1px solid #E5D9E2;border-top:4px solid var(--rose)}
+.pillar-card:nth-child(2){background:#EEF0E9;border-top-color:var(--sage)}
+.pillar-card:nth-child(3){background:#F5DCE3;border-top-color:var(--rose)}
+.pillar-card:nth-child(4){background:#F8EBD9;border-top-color:var(--gold)}
+.pillar-number{font-size:.67rem;letter-spacing:.15em;color:var(--muted)}
+.pillar-symbol{font-size:2rem;color:var(--terracotta);margin:1rem 0}
+.pillar-card:nth-child(2) .pillar-symbol{color:#63745A}
+.pillar-card h3{font:500 1.45rem/1.2 var(--serif);color:var(--brown)}
+.pillar-card p{font-size:.84rem;color:var(--muted)}
+.pillar-card small{font-size:.67rem;color:var(--terracotta);letter-spacing:.02em}
+.pillars-note{margin:1.5rem 0 0;padding:1rem 1.2rem;border-left:3px solid var(--gold);background:rgba(255,252,250,.72);font-size:.82rem;color:var(--muted)}
+.resource-card{border-color:#E5D9E2}
+.resource-card:nth-child(1) .resource-visual{background:linear-gradient(135deg,#F5DCE3,#C9A7C5)}
+.resource-card:nth-child(2) .resource-visual{background:linear-gradient(135deg,#EEF0E9,#8C9A7E)}
+.resource-card:nth-child(3) .resource-visual{background:linear-gradient(135deg,#F8EBD9,#D4AF7C)}
+.book-stack i:nth-child(1){background:#C9A7C5}
+.book-stack i:nth-child(2){background:#F8F5F0}
+.book-stack i:nth-child(3){background:#8C9A7E}
+.visual-book{background:#FFFCFA;color:var(--terracotta);box-shadow:12px 14px 0 rgba(140,154,126,.25)}
+.visual-book i{color:#B38B53}
+.study-paper{background:#FFFCFA}
+.community{background:linear-gradient(115deg,#5C3A63 0%,#694C6B 56%,#69785F 100%)}
+.community .section-kicker{color:#F5DCE3}
+.community h2 em{color:#F5DCE3}
+.circle-stamp{border-color:var(--gold)}
+.circle-stamp b{color:var(--gold)}
+.prayer-form{border-top:4px solid var(--sage);background:linear-gradient(140deg,#FFFCFA,#F5DCE3 150%)}
+.prayer-form input,.prayer-form textarea{border-color:#DCC8D7;background:#FFFCFA}
+.prayer-form input:focus,.prayer-form textarea:focus{outline-color:var(--sage)}
+.prayer-verse{border-left-color:var(--sage);color:var(--brown)}
+.closing-verse{background:linear-gradient(110deg,#F5DCE3 0%,#F8F5F0 48%,#E4E8DF 100%)}
+.closing-flower{color:var(--terracotta)}
+.closing-verse>p{color:var(--terracotta)}
+.closing-ref{color:var(--brown)}
+.site-footer{background:#F8F5F0;border-top:1px solid #DCC8D7}
+.footer-links a:hover{color:var(--terracotta)}
+@media(max-width:900px){.pillar-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.essence-grid,.values-list,.pillar-grid{grid-template-columns:1fr}.manifesto{padding:1.5rem}.essence-intro{text-align:left}}
