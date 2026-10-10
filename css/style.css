@@ -1171,3 +1171,36 @@ body{font-size:18px!important}
   font-size: 1.05rem !important;
   top: 2% !important;
 }
+
+
+/* VIRTUOSAS: composición simétrica de la cubierta mágica */
+.intro .verse-scratch .scratch-prompt {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .7rem !important;
+  padding: 1.25rem !important;
+  text-align: center !important;
+}
+.intro .verse-scratch .scratch-prompt > .scratch-star {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  flex: 0 0 auto !important;
+  font-size: 1.05rem !important;
+  line-height: 1 !important;
+  margin: 0 0 .15rem !important;
+}
+.intro .verse-scratch .scratch-prompt > strong,
+.intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt > small {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
