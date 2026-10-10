@@ -5,9 +5,9 @@
   let active=false,last=null,revealed=false,particles=[],raf=0,lastSpawn=0;
   let passStart=null,passes=0,travel=0;
   const isTouch=() => window.matchMedia('(pointer: coarse)').matches;
-  const brush=() => isTouch() ? 46 : 27;
-  const passesNeeded=() => isTouch() ? 2 : 4;
-  const passDistance=() => card.clientWidth*(isTouch()?.30:.36);
+  const brush=() => isTouch() ? 58 : 43;
+  const passesNeeded=() => 2;
+  const passDistance=() => card.clientWidth*(isTouch()?.20:.24);
 
   const spark=document.createElement('canvas');spark.className='scratch-sparkles';spark.setAttribute('aria-hidden','true');card.appendChild(spark);
   const fx=spark.getContext('2d');
@@ -54,7 +54,7 @@
   function finishPass(){
     if(passStart&&travel>passDistance()){
       passes++;
-      const progress=Math.min(0.94,passes/passesNeeded());
+      const progress=Math.min(1,passes/passesNeeded());
       card.style.setProperty('--scratch-progress',String(progress));
       if(passes>=passesNeeded())finishReveal();
     }
@@ -75,7 +75,7 @@
     }
     card.classList.add('is-revealed');
     card.style.setProperty('--scratch-progress','1');
-    let start=null,duration=1500;
+    let start=null,duration=750;
     function dissolve(ts){
       if(!start)start=ts;const t=Math.min(1,(ts-start)/duration);
       base.globalCompositeOperation='destination-out';
