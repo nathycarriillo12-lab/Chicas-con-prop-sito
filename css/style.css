@@ -213,3 +213,44 @@ h1{font-size:clamp(2.7rem,4.65vw,5.1rem);margin:1rem 0 1.1rem}
 .footer-links a:hover{color:var(--terracotta)}
 @media(max-width:900px){.pillar-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.essence-grid,.values-list,.pillar-grid{grid-template-columns:1fr}.manifesto{padding:1.5rem}.essence-intro{text-align:left}}
+
+
+/* Corrección de balance cromático: el uva es acento, no fondo dominante */
+:root{--terracotta:#5C3A63;--brown:#49384A;--cream:#F8F5F0;--paper:#FFFCFA;--blush:#F5DCE3;--rose:#C9A7C5;--sage:#8C9A7E;--gold:#D4AF7C}
+body{background:#F8F5F0}
+.site-header{background:rgba(248,245,240,.97);border-bottom:1px solid #E5D9E2}
+.site-nav{color:#49384A}
+.hero-art{background:linear-gradient(145deg,#F5DCE3 0%,#E8D5E4 25%,#C9A7C5 43%,#B6BDAA 70%,#8C9A7E 86%,#D4AF7C 100%)}
+.hero-art:before{background:linear-gradient(130deg,rgba(255,252,250,.45),transparent 55%),radial-gradient(ellipse at 15% 15%,#FFFCFA 0,transparent 35%)}
+.art-sun{background:#F8E9D5}
+.art-flower{color:#FFF9F2;text-shadow:0 2px 18px rgba(92,58,99,.18)}
+.art-leaf{color:#718268}
+.bible-page{border-color:#D4AF7C}
+.note-flower{color:#8C9A7E}
+.hero-note{border-top-color:#DCC8D7}
+.verse-card{background:linear-gradient(110deg,#F5DCE3 0%,#F8F5F0 48%,#E4E8DF 100%);border-left:4px solid #C9A7C5}
+.essence{background:#F8F5F0}
+.manifesto{background:linear-gradient(110deg,#F5DCE3 0%,#FFFCFA 52%,#E4E8DF 100%);border-left-color:#D4AF7C}
+.essence-card{background:#FFFCFA}
+.essence-card:nth-child(2){background:#E8ECE3}
+.values-list>div{background:#FFFCFA}
+.values-list>div:nth-child(2),.values-list>div:nth-child(5){background:#F5DCE3}
+.values-list>div:nth-child(3),.values-list>div:nth-child(4){background:#E8ECE3}
+.pillars{background:linear-gradient(180deg,#F8F5F0 0%,#F5DCE3 100%)}
+.pillar-card{background:#FFFCFA}
+.pillar-card:nth-child(2){background:#E8ECE3}
+.pillar-card:nth-child(3){background:#F5DCE3}
+.pillar-card:nth-child(4){background:#F8EBDD}
+.photo-tile{background:#E8D5E4}
+.resource-card{background:#FFFCFA}
+.resource-card:nth-child(1) .resource-visual{background:linear-gradient(135deg,#F5DCE3,#C9A7C5)}
+.resource-card:nth-child(2) .resource-visual{background:linear-gradient(135deg,#E8ECE3,#8C9A7E)}
+.resource-card:nth-child(3) .resource-visual{background:linear-gradient(135deg,#F8EBDD,#D4AF7C)}
+.community{background:linear-gradient(115deg,#5C3A63 0%,#765C78 52%,#8C9A7E 100%)}
+.community-ornament{color:#F5DCE3}
+.prayer-form{background:linear-gradient(140deg,#FFFCFA 0%,#F5DCE3 100%);border-top:4px solid #8C9A7E}
+.prayer-form input,.prayer-form textarea{background:#FFFCFA;border-color:#DCC8D7}
+.closing-verse{background:linear-gradient(110deg,#F5DCE3 0%,#F8F5F0 48%,#E4E8DF 100%)}
+.site-footer{background:#F8F5F0;border-top:1px solid #DCC8D7}
+.button-primary{background:#5C3A63;color:#FFFCFA}
+.nav-cta{background:#E8ECE3;border-color:#8C9A7E}
