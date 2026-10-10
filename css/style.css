@@ -780,3 +780,15 @@ body{font-size:18px!important}
   .button,.nav-cta{min-height:52px;padding:.85rem 1.35rem;font-size:.74rem;letter-spacing:.1em}
 }
 @media(prefers-reduced-motion:reduce){.button,.nav-cta,.scratch-reset,.prayer-form button{transition:none}}
+
+
+/* Iconografía con sentido para los cuatro pilares */
+.quick-icon{font-family:var(--sans);font-size:2rem;font-weight:400;line-height:1;display:flex;align-items:center;justify-content:center}
+.quick-identity .quick-icon{color:#fff}
+.quick-character .quick-icon{font-size:2.1rem}
+.quick-relations .quick-icon{font-family:Georgia,serif;font-size:2.55rem}
+.quick-mission .quick-icon{font-size:2.2rem}
+.quick-pillar>i{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid currentColor;border-radius:50%;font-style:normal;font-size:1.35rem;line-height:1;transition:background-color .22s ease,color .22s ease,transform .22s ease}
+.quick-pillar:hover>i{background:#704064;color:#fff;transform:translateX(2px)}
+.quick-pillar .quick-arrow-down{font-size:1.35rem}
+.quick-mission:hover>.quick-arrow-down{transform:translateY(2px)}
