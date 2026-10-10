@@ -1166,3 +1166,34 @@ body{font-size:18px!important}
   text-align: center !important;
   margin: 0 !important;
 }
+
+
+/* Corrección definitiva de centrado móvil: la estrella no ocupa espacio en el grupo de texto */
+.intro .verse-scratch .scratch-prompt {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .45rem !important;
+  padding: 1rem !important;
+}
+.intro .verse-scratch .scratch-prompt .scratch-star {
+  position: absolute !important;
+  top: 12% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+.intro .verse-scratch .scratch-prompt strong {
+  margin: 1.7rem 0 0 !important;
+  width: 100%;
+  text-align: center !important;
+}
+.intro .verse-scratch .scratch-prompt span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt small {
+  margin: 0 !important;
+  width: 100%;
+  text-align: center !important;
+}
+@media (max-width: 620px) {
+  .intro .verse-scratch .scratch-prompt strong { margin-top: 1.35rem !important; }
+}
