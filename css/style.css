@@ -1204,3 +1204,37 @@ body{font-size:18px!important}
   margin: 0 !important;
   text-align: center !important;
 }
+
+
+/* Cubierta: cuatro elementos centrados como un solo grupo, con separación uniforme */
+.intro .verse-scratch .scratch-prompt {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .7rem !important;
+  padding: 1rem !important;
+  text-align: center !important;
+}
+.intro .verse-scratch .scratch-prompt > .scratch-star {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  display: block !important;
+  font-size: 1.05rem !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+.intro .verse-scratch .scratch-prompt > strong,
+.intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt > small {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  display: block !important;
+  width: 100% !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
