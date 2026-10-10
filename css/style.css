@@ -1152,3 +1152,22 @@ body{font-size:18px!important}
   font-size: 1.05rem !important;
   text-shadow: 0 0 8px rgba(255,245,214,.3) !important;
 }
+
+
+/* Corrección: devolver el texto al centro vertical de la tarjeta; no moverlo con offsets */
+.intro .verse-scratch .scratch-prompt > strong,
+.intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt > small {
+  position: static !important;
+  top: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+.intro .verse-scratch .scratch-prompt {
+  justify-content: center !important;
+  gap: .5rem !important;
+}
+.intro .verse-scratch .scratch-prompt > .scratch-star {
+  font-size: 1.05rem !important;
+  top: 2% !important;
+}
