@@ -1279,3 +1279,19 @@ body{font-size:18px!important}
   z-index: 1 !important;
   margin-top: .65rem !important;
 }
+
+
+/* Restaurar botón principal del hero según el diseño aprobado: morado, texto y flecha blancos */
+.hero-reference .hero-actions > .button.button-primary {
+  background: #6C3F61 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #6C3F61 !important;
+}
+.hero-reference .hero-actions > .button.button-primary span {
+  color: #FFFFFF !important;
+}
+.hero-reference .hero-actions > .button.button-primary:hover {
+  background: #452B4B !important;
+  color: #FFFFFF !important;
+  border-color: #452B4B !important;
+}
