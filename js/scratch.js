@@ -33,6 +33,9 @@
   }
   function reveal(p){
     if(revealed)return;
+    // The prompt is HTML above the canvas, so hide it as soon as the wand starts moving.
+    // This prevents its white lettering from floating over the revealed verse.
+    card.querySelector('.scratch-prompt')?.classList.add('is-hidden');
     const count=last?Math.max(1,Math.ceil(Math.hypot(p.x-last.x,p.y-last.y)/8)):1;
     base.save();base.globalCompositeOperation='destination-out';
     for(let i=0;i<=count;i++){
