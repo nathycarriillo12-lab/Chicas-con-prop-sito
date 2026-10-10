@@ -523,3 +523,27 @@ body{font-size:18px!important}
  .scratch-prompt strong{font-size:1.55rem}
  .scratch-prompt span:not(.scratch-star){font-size:.92rem}
 }
+
+
+/* Versículo más amplio y revelación con estela de polvo estelar */
+.intro .verse-scratch{width:min(100%,1120px);min-height:280px;margin:3rem auto 0;border-radius:24px;box-shadow:0 18px 50px rgba(73,56,74,.09)}
+.intro .verse-reveal{min-height:280px;padding:3rem 5rem}
+.intro .verse-reveal blockquote{font-size:clamp(1.8rem,2.5vw,2.35rem)!important;max-width:850px}
+.intro .scratch-prompt{background:radial-gradient(ellipse at center,rgba(255,255,255,.06),transparent 65%)}
+.intro .scratch-star{font-size:2.7rem;text-shadow:0 0 18px rgba(255,245,214,.6)}
+.intro .scratch-prompt strong{font-size:clamp(1.9rem,2.5vw,2.4rem);letter-spacing:.01em}
+.intro .scratch-prompt span:not(.scratch-star){font-size:1.12rem}
+.intro .scratch-prompt small{font-size:.82rem}
+.intro .scratch-layer{cursor:crosshair}
+@media(max-width:900px){
+ .intro .verse-scratch,.intro .verse-reveal{min-height:245px}
+ .intro .verse-reveal{padding:2.5rem 3rem}
+}
+@media(max-width:620px){
+ .intro .verse-scratch,.intro .verse-reveal{min-height:225px}
+ .intro .verse-scratch{margin-top:2rem;border-radius:20px}
+ .intro .verse-reveal{padding:2.2rem 1.4rem}
+ .intro .verse-reveal blockquote{font-size:1.55rem!important}
+ .intro .scratch-prompt strong{font-size:1.75rem}
+ .intro .scratch-prompt span:not(.scratch-star){font-size:1rem}
+}
