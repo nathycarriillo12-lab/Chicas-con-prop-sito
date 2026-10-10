@@ -87,3 +87,16 @@ h1{font-size:clamp(2.7rem,4.65vw,5.1rem);margin:1rem 0 1.1rem}
  .photo-gallery{grid-template-rows:180px 150px;gap:.55rem}
  .site-footer{padding:1.6rem 1.15rem}
 }
+
+
+/* Identidad VIRTUOSAS y modelo de cuatro pilares */
+.pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:2rem}
+.pillar-card{position:relative;background:var(--paper);border:1px solid var(--line);padding:1.5rem 1.25rem 1.4rem;min-height:260px}
+.pillar-number{font-size:.65rem;letter-spacing:.16em;color:var(--terracotta);font-weight:700}
+.pillar-symbol{font:2rem var(--serif);color:var(--sage);margin:.65rem 0}
+.pillar-card h3{font:500 1.35rem/1.2 var(--serif);margin:.2rem 0 .7rem;color:var(--brown)}
+.pillar-card p{font-size:.83rem;color:var(--muted);line-height:1.7;margin-bottom:1.1rem}
+.pillar-card small{display:block;font-size:.64rem;color:var(--terracotta);letter-spacing:.02em}
+.pillars-note{text-align:center;font-size:.78rem;color:var(--muted);margin:1.6rem auto 0;max-width:720px}
+@media(max-width:900px){.pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pillar-card{min-height:230px}}
+@media(max-width:520px){.pillar-grid{grid-template-columns:1fr}.pillar-card{min-height:0;padding:1.3rem}.pillar-symbol{margin:.4rem 0}.pillar-card h3{font-size:1.4rem}}
