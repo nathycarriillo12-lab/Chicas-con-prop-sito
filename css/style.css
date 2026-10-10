@@ -851,3 +851,16 @@ body{font-size:18px!important}
   color:#49384A!important;
   opacity:1!important;
 }
+
+
+/* El texto guía del polvo de hadas también se desvanece al descubrir el salmo */
+.verse-scratch .scratch-prompt{
+  opacity:calc(1 - var(--scratch-progress, 0))!important;
+  transition:opacity .12s linear!important;
+  will-change:opacity;
+}
+.verse-scratch.is-revealed .scratch-prompt,
+.verse-scratch.is-fully-revealed .scratch-prompt{
+  opacity:0!important;
+  visibility:hidden!important;
+}
