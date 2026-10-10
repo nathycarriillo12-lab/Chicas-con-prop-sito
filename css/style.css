@@ -834,3 +834,20 @@ body{font-size:18px!important}
 .verse-scratch.is-revealed .scratch-prompt{opacity:0!important}
 @media(max-width:620px){.button,.nav-cta,.text-link.intro-link{min-height:50px;padding:.8rem 1.25rem;font-size:.73rem;letter-spacing:.1em}}
 @media(prefers-reduced-motion:reduce){.button,.nav-cta,.text-link.intro-link,.scratch-prompt{transition:none!important}}
+
+
+/* Fix: mantener contraste legible en hover de todos los botones */
+.button:hover,.button:focus-visible,
+.nav-cta:hover,.nav-cta:focus-visible,
+.text-link.intro-link:hover,.text-link.intro-link:focus-visible{
+  background:#fffaf5!important;
+  color:#49384A!important;
+  border-color:#704064!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.button:hover span,.nav-cta:hover span,
+.text-link.intro-link:hover .intro-link-arrow{
+  color:#49384A!important;
+  opacity:1!important;
+}
