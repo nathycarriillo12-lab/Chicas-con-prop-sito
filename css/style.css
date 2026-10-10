@@ -332,3 +332,52 @@ body{background:#F8F5F0}
 
 /* Approved horizontal VIRTUOSAS lockup */
 .brand-lockup{display:flex;align-items:center;gap:0;flex:0 0 auto}.brand-lockup-image{display:block;width:300px;height:auto;max-width:100%}.footer-brand.brand-lockup .brand-lockup-image{width:245px}@media(max-width:900px){.brand-lockup-image{width:255px}}@media(max-width:620px){.site-header{justify-content:space-between;gap:8px}.brand-lockup-image{width:min(250px,68vw)}.footer-brand.brand-lockup .brand-lockup-image{width:230px}}
+
+
+/* Ajustes de legibilidad y responsive — octubre 2026 */
+.hero-reference .hero-lead{max-width:570px;font-size:clamp(1rem,1.3vw,1.16rem);line-height:1.7}
+.quick-pillar{grid-template-columns:58px minmax(0,1fr) 34px;gap:12px}
+.quick-icon{width:58px;height:58px}
+.quick-pillar strong{font-size:.78rem;line-height:1.5;margin:.45rem 0 .7rem}
+.quick-pillar small{display:block;font-size:1.06rem;line-height:1.5}
+.quick-pillar i{width:34px;height:34px}
+@media(max-width:1100px){
+ .site-header{padding-left:20px;padding-right:20px}
+ .brand-lockup-image{width:250px}
+ .site-nav{gap:12px;font-size:.64rem;letter-spacing:.1em}
+ .nav-cta{padding:.8rem 1rem}
+ .quick-pillars{gap:12px}
+ .quick-pillar{grid-template-columns:48px minmax(0,1fr) 30px;padding:18px 14px;gap:10px}
+ .quick-icon{width:48px;height:48px;font-size:1.6rem}
+ .quick-pillar small{font-size:1rem}
+ .quick-pillar i{width:30px;height:30px}
+}
+@media(max-width:900px){
+ .site-header{height:auto;min-height:82px;flex-wrap:wrap;padding:12px 20px}
+ .brand-lockup-image{width:min(270px,60vw)}
+ .site-nav{width:100%;justify-content:center;flex-wrap:wrap;gap:8px 18px;font-size:.68rem}
+ .hero-reference{grid-template-columns:1fr 1fr;gap:26px;padding-top:24px}
+ .hero-reference h1{font-size:clamp(2.8rem,5.8vw,4.4rem);line-height:.98}
+ .hero-photo-frame{height:clamp(320px,46vw,460px)}
+ .quick-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .quick-pillar{min-height:140px;grid-template-columns:54px minmax(0,1fr) 32px}
+ .quick-icon{width:54px;height:54px}
+}
+@media(max-width:620px){
+ .site-header{justify-content:space-between;gap:8px;padding:12px 16px}
+ .brand-lockup-image{width:min(245px,70vw)}
+ .site-nav{font-size:.65rem;gap:8px 14px}
+ .hero-reference{grid-template-columns:1fr;padding:24px 20px 20px;gap:22px}
+ .hero-reference .hero-copy{padding:0}
+ .hero-reference h1{font-size:clamp(3rem,12vw,4.4rem);line-height:.98;margin:1rem 0 1.1rem}
+ .hero-reference .eyebrow{font-size:.59rem;letter-spacing:.15em}
+ .hero-reference .hero-lead{font-size:1rem;line-height:1.65}
+ .hero-reference .hero-actions{flex-direction:row;gap:10px;flex-wrap:wrap}
+ .hero-reference .button{padding:.9rem 1.1rem;font-size:.62rem}
+ .hero-photo-frame{height:78vw;min-height:290px;max-height:420px;order:0}
+ .quick-pillars{grid-template-columns:1fr;padding:0 16px 22px;gap:10px}
+ .quick-pillar{min-height:125px;grid-template-columns:54px minmax(0,1fr) 32px;padding:17px 14px}
+ .quick-pillar strong{font-size:.76rem;margin:.2rem 0 .45rem}
+ .quick-pillar small{font-size:1rem;line-height:1.45}
+ .intro{padding-top:2.5rem}
+}
