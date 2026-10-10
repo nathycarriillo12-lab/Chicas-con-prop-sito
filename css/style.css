@@ -682,3 +682,27 @@ body{font-size:18px!important}
 .scratch-prompt{opacity:calc(1 - var(--scratch-progress, 0));transition:opacity .08s linear}
 .verse-scratch.is-revealed .scratch-prompt{opacity:0}
 @media(max-width:760px){.essence-heading{grid-template-columns:1fr;gap:1rem}.essence-heading>p{font-size:1rem;line-height:1.8}}
+
+
+/* Igualar textos descriptivos de bienvenida y esencia; conservar énfasis tipográfico */
+.intro .intro-text p,
+.essence .essence-heading>p{
+  font-size:clamp(1.12rem,1.4vw,1.28rem)!important;
+  line-height:1.8!important;
+  font-weight:400;
+}
+.intro .intro-text strong,
+.essence .essence-heading>p strong{
+  font-weight:700;
+}
+.essence .essence-heading>p{
+  color:var(--muted);
+  max-width:560px;
+}
+@media(max-width:620px){
+  .intro .intro-text p,
+  .essence .essence-heading>p{
+    font-size:1.1rem!important;
+    line-height:1.75!important;
+  }
+}
