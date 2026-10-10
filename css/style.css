@@ -324,3 +324,8 @@ body{background:#F8F5F0}
 .site-footer{border-top:1px solid #E8DDE8}
 @media(max-width:1000px){.site-header{height:auto;min-height:90px;flex-wrap:wrap;padding:14px 22px}.site-nav{gap:14px;flex-wrap:wrap;justify-content:center}.hero-reference{grid-template-columns:1fr 1fr}.hero-reference h1{font-size:clamp(3rem,6vw,4.7rem)}.quick-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-pillar{min-height:155px}}
 @media(max-width:620px){.site-header{justify-content:center;gap:14px}.brand-emblem{font-size:3.8rem;width:50px}.brand-emblem>span{font-size:1.2rem;left:25px;top:-5px}.brand-words strong{font-size:1.8rem}.brand-words small{font-size:.48rem}.site-nav{width:100%;gap:10px 16px;font-size:.58rem}.nav-cta{padding:.65rem .9rem}.hero-reference{grid-template-columns:1fr;padding-top:20px;gap:25px}.hero-reference h1{font-size:clamp(3.3rem,13vw,5rem)}.hero-photo-frame{height:75vw;min-height:300px;max-height:430px;order:2}.quick-pillars{grid-template-columns:1fr;padding:0 16px 22px;gap:10px}.quick-pillar{min-height:145px;grid-template-columns:58px 1fr 36px;padding:18px 14px}.quick-icon{width:58px;height:58px}.quick-pillar strong{margin-top:.2rem}.intro{padding-top:2rem}}
+
+/* VIRTUOSAS botanical monogram */
+.brand-emblem{display:block;width:58px;height:64px;flex:0 0 58px;object-fit:contain;font-size:0;line-height:0}
+.footer-brand .brand-emblem{width:42px;height:48px;flex-basis:42px}
+@media(max-width:620px){.brand-emblem{width:48px;height:54px;flex-basis:48px}.footer-brand .brand-emblem{width:42px;height:48px;flex-basis:42px}}
