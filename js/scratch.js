@@ -60,7 +60,7 @@
   function reveal(p){
     if(revealed)return;
     base.save();base.globalCompositeOperation='destination-out';
-    const count=last?Math.max(1,Math.ceil(Math.hypot(p.x-last.x,p.y-last.y)/5)):1;
+    const count=last?Math.max(1,Math.ceil(Math.hypot(p.x-last.x,p.y-last.y)/9)):1;
     for(let i=0;i<=count;i++){
       const t=i/count,x=last?last.x+(p.x-last.x)*t:p.x,y=last?last.y+(p.y-last.y)*t:p.y;
       // Scattered tiny dots create a soft dust-cloud trail rather than a hard erased line
@@ -79,7 +79,7 @@
     try{
       const d=base.getImageData(0,0,cover.width,cover.height).data;let clear=0;
       for(let i=3;i<d.length;i+=4)if(d[i]<30)clear++;
-      if(clear/(d.length/4)>.5){revealed=true;card.classList.add('is-revealed');base.clearRect(0,0,card.clientWidth,card.clientHeight);burst(card.clientWidth/2,card.clientHeight/2,45);}
+      if(clear/(d.length/4)>.34){revealed=true;card.classList.add('is-revealed');base.clearRect(0,0,card.clientWidth,card.clientHeight);burst(card.clientWidth/2,card.clientHeight/2,45);}
     }catch(e){}
   }
   function animate(){
