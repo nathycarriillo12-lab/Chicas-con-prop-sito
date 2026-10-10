@@ -577,3 +577,11 @@ body{font-size:18px!important}
 .verse-scratch .scratch-prompt{transition:opacity .2s ease}
 .verse-scratch .scratch-prompt.is-hidden,
 .verse-scratch.is-fully-revealed .scratch-prompt{opacity:0!important;visibility:hidden!important}
+
+/* Final state: remove every prompt remnant and show the Bible reference */
+.verse-scratch.is-revealed .scratch-prompt,
+.verse-scratch .scratch-prompt.is-hidden,
+.verse-scratch.is-fully-revealed .scratch-prompt{opacity:0!important;visibility:hidden!important;display:none!important}
+.verse-scratch .verse-reveal cite{opacity:0!important;visibility:hidden!important}
+.verse-scratch.is-fully-revealed .verse-reveal cite{opacity:1!important;visibility:visible!important}
+.verse-scratch .verse-sprig{display:none!important}
