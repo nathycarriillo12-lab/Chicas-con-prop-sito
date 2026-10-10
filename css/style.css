@@ -329,3 +329,6 @@ body{background:#F8F5F0}
 .brand-emblem{display:block;width:58px;height:64px;flex:0 0 58px;object-fit:contain;font-size:0;line-height:0}
 .footer-brand .brand-emblem{width:42px;height:48px;flex-basis:42px}
 @media(max-width:620px){.brand-emblem{width:48px;height:54px;flex-basis:48px}.footer-brand .brand-emblem{width:42px;height:48px;flex-basis:42px}}
+
+/* Approved horizontal VIRTUOSAS lockup */
+.brand-lockup{display:flex;align-items:center;gap:0;flex:0 0 auto}.brand-lockup-image{display:block;width:300px;height:auto;max-width:100%}.footer-brand.brand-lockup .brand-lockup-image{width:245px}@media(max-width:900px){.brand-lockup-image{width:255px}}@media(max-width:620px){.site-header{justify-content:space-between;gap:8px}.brand-lockup-image{width:min(250px,68vw)}.footer-brand.brand-lockup .brand-lockup-image{width:230px}}
