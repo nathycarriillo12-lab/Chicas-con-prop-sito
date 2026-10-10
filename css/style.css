@@ -1221,18 +1221,26 @@ body{font-size:18px!important}
 
 
 
-/* Ajuste preciso: elevar solo la estrella y dejar el texto donde ya se veía mejor */
-@media (max-width: 620px) {
-  .intro .verse-scratch .scratch-prompt > .scratch-star {
-    position: absolute !important;
-    top: -5% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-  }
-  .intro .verse-scratch .scratch-prompt > strong,
-  .intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
-  .intro .verse-scratch .scratch-prompt > small {
-    top: -34px !important;
-  }
-  .intro .verse-scratch .scratch-prompt > strong { margin-top: 0 !important; }
+
+
+/* Ajuste final: mover únicamente la estrella; el bloque de texto permanece centrado */
+.intro .verse-scratch .scratch-prompt {
+  justify-content: center !important;
+}
+.intro .verse-scratch .scratch-prompt > .scratch-star {
+  position: absolute !important;
+  top: 3% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+}
+.intro .verse-scratch .scratch-prompt > strong,
+.intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt > small {
+  position: static !important;
+  top: auto !important;
+  transform: none !important;
+}
+.intro .verse-scratch .scratch-prompt > strong {
+  margin: 0 !important;
 }
