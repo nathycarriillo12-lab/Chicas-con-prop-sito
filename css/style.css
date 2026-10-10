@@ -864,3 +864,22 @@ body{font-size:18px!important}
   opacity:0!important;
   visibility:hidden!important;
 }
+
+
+/* El texto guía del polvo de hadas cambia a dorado al pasar el cursor */
+.verse-scratch:hover .scratch-prompt,
+.verse-scratch:focus-visible .scratch-prompt{
+  color:#E8C46A!important;
+}
+.verse-scratch:hover .scratch-prompt strong,
+.verse-scratch:hover .scratch-prompt span,
+.verse-scratch:hover .scratch-prompt small,
+.verse-scratch:focus-visible .scratch-prompt strong,
+.verse-scratch:focus-visible .scratch-prompt span,
+.verse-scratch:focus-visible .scratch-prompt small{
+  color:#E8C46A!important;
+}
+.verse-scratch:hover .scratch-prompt .scratch-star,
+.verse-scratch:focus-visible .scratch-prompt .scratch-star{
+  color:#F2D58A!important;
+}
