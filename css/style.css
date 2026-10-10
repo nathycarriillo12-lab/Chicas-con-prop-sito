@@ -254,3 +254,27 @@ body{background:#F8F5F0}
 .site-footer{background:#F8F5F0;border-top:1px solid #DCC8D7}
 .button-primary{background:#5C3A63;color:#FFFCFA}
 .nav-cta{background:#E8ECE3;border-color:#8C9A7E}
+
+
+/* Refinamiento visual aplicado: menos cursiva manuscrita, más fotografía enmarcada */
+:root{--script:"Cormorant Garamond",Georgia,serif}
+h1 em,h2 em,.visual-book i{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:400}
+.hero-photo-frame{height:clamp(420px,43vw,590px);border-radius:150px 150px 28px 28px;border:1px solid var(--gold);padding:7px;background:#FFFCFA;overflow:hidden;position:relative}
+.hero-photo{width:100%;height:100%;display:block;object-fit:cover;object-position:center 40%;border-radius:145px 145px 22px 22px}
+.hero-photo-overlay{position:absolute;inset:7px;border-radius:145px 145px 22px 22px;background:linear-gradient(0deg,rgba(52,37,50,.48),transparent 45%);pointer-events:none}
+.hero-photo-frame .art-caption{z-index:2;bottom:8%;text-shadow:0 2px 12px rgba(30,20,25,.55)}
+.photo-gallery-uniform{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto;gap:1.25rem}
+.photo-gallery-uniform .photo-tile,.photo-gallery-uniform .photo-tile-large,.photo-gallery-uniform .photo-tile-tall{grid-row:auto;aspect-ratio:4/3;min-height:0;padding:6px;border:1px solid var(--gold);border-radius:22px 22px 6px 6px;background:#FFFCFA;box-shadow:0 7px 22px rgba(73,56,74,.07)}
+.photo-gallery-uniform .photo-tile img{border-radius:16px 16px 3px 3px;object-fit:cover;width:100%;height:100%}
+.photo-gallery-uniform .photo-tile:after{inset:30% 6px 6px;border-radius:0 0 3px 3px}
+.photo-gallery-uniform .photo-tile figcaption{left:1.1rem;bottom:1.1rem;font-size:1.35rem}
+.resource-card{overflow:hidden;border-radius:18px 18px 5px 5px}
+.resource-visual{padding:7px}
+.resource-visual:after{content:"";position:absolute;inset:7px;border:1px solid rgba(255,252,250,.8);border-radius:12px 12px 3px 3px;pointer-events:none}
+.resource-visual>*{z-index:1}
+.resource-visual>span{z-index:2}
+.essence-card,.pillar-card{border-radius:16px 16px 5px 5px}
+.essence-card{box-shadow:0 8px 24px rgba(73,56,74,.035)}
+.pillar-card{box-shadow:0 8px 24px rgba(73,56,74,.035)}
+@media(max-width:900px){.hero-photo-frame{height:min(112vw,550px)}}
+@media(max-width:620px){.photo-gallery-uniform{grid-template-columns:1fr;gap:1rem}.photo-gallery-uniform .photo-tile{aspect-ratio:4/3}.hero-photo-frame{height:112vw;min-height:390px;max-height:510px}}
