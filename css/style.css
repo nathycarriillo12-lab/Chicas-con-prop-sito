@@ -554,3 +554,11 @@ body{font-size:18px!important}
 .verse-scratch .scratch-sparkles{position:absolute!important;inset:0!important;z-index:3!important;display:block!important;width:100%;height:100%;pointer-events:none;border-radius:inherit}
 .verse-scratch .scratch-prompt{z-index:4!important}
 .verse-scratch .scratch-reset{z-index:5!important}
+
+/* Tarjeta del versículo: mismo ancho que la composición de bienvenida */
+.intro .verse-scratch{width:100%;max-width:none;margin:3rem 0 0;min-height:290px}
+.intro .verse-reveal{min-height:290px}
+@media(max-width:620px){
+ .intro .verse-scratch{width:100%;margin-top:2rem;min-height:225px}
+ .intro .verse-reveal{min-height:225px}
+}
