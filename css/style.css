@@ -883,3 +883,14 @@ body{font-size:18px!important}
 .verse-scratch:focus-visible .scratch-prompt .scratch-star{
   color:#F2D58A!important;
 }
+
+
+/* Hover dorado para el botón superior «Únete», no para el contenedor de polvo */
+.nav-cta:hover,.nav-cta:focus-visible{
+  color:#C88A35!important;
+  border-color:#C88A35!important;
+  background:#fffaf5!important;
+}
+.nav-cta:hover span,.nav-cta:focus-visible span{
+  color:#C88A35!important;
+}
