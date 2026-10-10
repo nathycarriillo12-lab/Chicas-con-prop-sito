@@ -1340,3 +1340,34 @@ body{font-size:18px!important}
       linear-gradient(90deg, rgba(245,220,227,0) 0%, rgba(245,220,227,.55) 48%, #F5DCE3 100%);
   }
 }
+
+
+/* VIRTUOSAS · unión visible entre arco y tarjeta rosa (sin alterar textos ni dimensiones) */
+@media (min-width: 761px) {
+  .essence-feature { overflow: visible !important; }
+  .essence-feature-copy {
+    position: relative !important;
+    isolation: isolate !important;
+    background: linear-gradient(90deg, #F8F5F0 0%, #F7ECEE 23%, #F5DCE3 58%, #F5DCE3 100%) !important;
+  }
+  .essence-feature-copy::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: -112px !important;
+    width: 160px !important;
+    background: linear-gradient(90deg,
+      rgba(248,245,240,0) 0%,
+      rgba(248,245,240,.32) 24%,
+      rgba(247,236,238,.72) 54%,
+      #F5DCE3 100%) !important;
+  }
+  .essence-feature-copy > * {
+    position: relative;
+    z-index: 1;
+  }
+}
