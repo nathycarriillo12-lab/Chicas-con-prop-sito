@@ -1130,3 +1130,18 @@ body{font-size:18px!important}
   margin: 0 !important;
   text-align: center !important;
 }
+
+
+/* Ajuste solicitado: estrella más pequeña; el texto conserva su posición y se desvanece al raspar */
+.intro .verse-scratch .scratch-prompt > .scratch-star {
+  font-size: 1.55rem !important;
+  top: 2% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+.intro .verse-scratch .scratch-prompt > strong,
+.intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
+.intro .verse-scratch .scratch-prompt > small {
+  opacity: calc(1 - var(--scratch-progress, 0)) !important;
+  transition: opacity .05s linear !important;
+}
