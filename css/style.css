@@ -866,31 +866,21 @@ body{font-size:18px!important}
 }
 
 
-/* El texto guía del polvo de hadas cambia a dorado al pasar el cursor */
-.verse-scratch:hover .scratch-prompt,
-.verse-scratch:focus-visible .scratch-prompt{
-  color:#E8C46A!important;
-}
-.verse-scratch:hover .scratch-prompt strong,
-.verse-scratch:hover .scratch-prompt span,
-.verse-scratch:hover .scratch-prompt small,
-.verse-scratch:focus-visible .scratch-prompt strong,
-.verse-scratch:focus-visible .scratch-prompt span,
-.verse-scratch:focus-visible .scratch-prompt small{
-  color:#E8C46A!important;
-}
-.verse-scratch:hover .scratch-prompt .scratch-star,
-.verse-scratch:focus-visible .scratch-prompt .scratch-star{
-  color:#F2D58A!important;
-}
 
 
-/* Hover dorado para el botón superior «Únete», no para el contenedor de polvo */
-.nav-cta:hover,.nav-cta:focus-visible{
+
+/* Hover dorado SOLO para el botón «Conoce lo que estamos construyendo» */
+.text-link.intro-link:hover,
+.text-link.intro-link:focus-visible{
   color:#C88A35!important;
   border-color:#C88A35!important;
   background:#fffaf5!important;
 }
-.nav-cta:hover span,.nav-cta:focus-visible span{
+.text-link.intro-link:hover .intro-link-label,
+.text-link.intro-link:focus-visible .intro-link-label,
+.text-link.intro-link:hover .intro-link-arrow,
+.text-link.intro-link:focus-visible .intro-link-arrow{
   color:#C88A35!important;
+  opacity:1!important;
 }
+/* El botón superior «Únete» conserva el estilo general original */
