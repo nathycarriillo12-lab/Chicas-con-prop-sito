@@ -1099,137 +1099,23 @@ body{font-size:18px!important}
 }
 
 
-/* VIRTUOSAS: mostrar siempre la referencia bíblica junto al versículo */
-.verse-scratch .verse-reveal cite,
-.verse-scratch.is-revealed .verse-reveal cite,
-.verse-scratch.is-fully-revealed .verse-reveal cite {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  position: relative;
-  z-index: 1;
-  margin-top: .75rem;
-}
 
 
-/* La cita y su referencia se descubren juntas al deslizar sobre la tarjeta mágica */
-.verse-scratch .verse-reveal cite {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transition: none !important;
-}
-.verse-scratch.is-revealed .verse-reveal cite,
-.verse-scratch.is-fully-revealed .verse-reveal cite {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-
-/* VIRTUOSAS · centrar verticalmente el texto de la cubierta morada */
-.verse-scratch .scratch-prompt {
-  justify-content: center !important;
-  gap: .55rem !important;
-  padding: 1.25rem !important;
-  text-align: center !important;
-}
-.verse-scratch .scratch-prompt .scratch-star {
-  margin-bottom: .1rem;
-}
-.verse-scratch .scratch-prompt strong,
-.verse-scratch .scratch-prompt span:not(.scratch-star),
-.verse-scratch .scratch-prompt small {
-  text-align: center !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-
-/* Ajuste real de composición: la estrella queda arriba y las tres líneas se centran juntas */
+/* Cubierta mágica: texto centrado y estrella independiente más arriba */
 .intro .verse-scratch .scratch-prompt {
-  justify-content: center !important;
-  gap: .5rem !important;
-  padding: 1.1rem 1rem !important;
-}
-.intro .verse-scratch .scratch-prompt .scratch-star {
   position: absolute !important;
-  top: 14% !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  margin: 0 !important;
-}
-.intro .verse-scratch .scratch-prompt strong {
-  margin-top: 2.1rem !important;
-  text-align: center !important;
-}
-.intro .verse-scratch .scratch-prompt span:not(.scratch-star),
-.intro .verse-scratch .scratch-prompt small {
-  text-align: center !important;
-  margin: 0 !important;
-}
-
-
-/* Corrección definitiva de centrado móvil: la estrella no ocupa espacio en el grupo de texto */
-.intro .verse-scratch .scratch-prompt {
+  inset: 0 !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: .45rem !important;
+  gap: .5rem !important;
   padding: 1rem !important;
-}
-.intro .verse-scratch .scratch-prompt .scratch-star {
-  position: absolute !important;
-  top: 12% !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-}
-.intro .verse-scratch .scratch-prompt strong {
-  margin: 1.7rem 0 0 !important;
-  width: 100%;
   text-align: center !important;
-}
-.intro .verse-scratch .scratch-prompt span:not(.scratch-star),
-.intro .verse-scratch .scratch-prompt small {
-  margin: 0 !important;
-  width: 100%;
-  text-align: center !important;
-}
-@media (max-width: 620px) {
-  .intro .verse-scratch .scratch-prompt strong { margin-top: 1.35rem !important; }
-}
-
-
-/* Ajuste de posición solicitado: subir el bloque de las tres líneas, sin mover la estrella ni cambiar la cubierta */
-.intro .verse-scratch .scratch-prompt strong,
-.intro .verse-scratch .scratch-prompt span:not(.scratch-star),
-.intro .verse-scratch .scratch-prompt small {
-  position: relative !important;
-  top: -34px !important;
-}
-.intro .verse-scratch .scratch-prompt strong {
-  margin-top: 0 !important;
-}
-
-
-/* Refinamiento visual: dar más aire entre la estrella y el texto de la cubierta */
-.intro .verse-scratch .scratch-prompt .scratch-star {
-  top: 5% !important;
-}
-
-
-
-
-
-
-
-
-/* Ajuste final: mover únicamente la estrella; el bloque de texto permanece centrado */
-.intro .verse-scratch .scratch-prompt {
-  justify-content: center !important;
 }
 .intro .verse-scratch .scratch-prompt > .scratch-star {
   position: absolute !important;
-  top: 3% !important;
+  top: 2% !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   margin: 0 !important;
@@ -1237,10 +1123,10 @@ body{font-size:18px!important}
 .intro .verse-scratch .scratch-prompt > strong,
 .intro .verse-scratch .scratch-prompt > span:not(.scratch-star),
 .intro .verse-scratch .scratch-prompt > small {
-  position: static !important;
-  top: auto !important;
+  position: relative !important;
+  top: -34px !important;
   transform: none !important;
-}
-.intro .verse-scratch .scratch-prompt > strong {
+  width: 100% !important;
   margin: 0 !important;
+  text-align: center !important;
 }
