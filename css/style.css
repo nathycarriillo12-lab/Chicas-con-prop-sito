@@ -1250,3 +1250,18 @@ body{font-size:18px!important}
   z-index: 1 !important;
   margin-top: .65rem !important;
 }
+
+
+/* FIX: la referencia debe verse siempre en la capa inferior junto al versículo */
+.intro .verse-scratch .verse-reveal cite,
+.intro .verse-scratch.is-revealed .verse-reveal cite,
+.intro .verse-scratch.is-fully-revealed .verse-reveal cite {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: var(--terracotta) !important;
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: .65rem !important;
+  transition: none !important;
+}
