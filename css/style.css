@@ -1139,3 +1139,16 @@ body{font-size:18px!important}
 .verse-scratch .scratch-prompt small {
   font-size: .72rem !important;
 }
+
+
+/* La cita y su referencia se descubren juntas al deslizar sobre la tarjeta mágica */
+.verse-scratch .verse-reveal cite {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+.verse-scratch.is-revealed .verse-reveal cite,
+.verse-scratch.is-fully-revealed .verse-reveal cite {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
