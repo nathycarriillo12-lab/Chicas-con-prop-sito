@@ -1460,3 +1460,9 @@ body{font-size:18px!important}
   }
   .essence-feature-copy:before { display: none !important; content: none !important; }
 }
+
+
+/* VIRTUOSAS — ajustes de contenido fase 1 */
+.resource-grid-single{grid-template-columns:minmax(0,430px);justify-content:start}
+.community-eligibility{font-size:.82rem;color:#f0dce9;letter-spacing:.02em;margin:-.6rem 0 1.5rem}
+@media(max-width:620px){.resource-grid-single{grid-template-columns:1fr}}
