@@ -24,5 +24,5 @@ prayerForm?.addEventListener('submit', event => {
     'Correo: ' + email + '\n\nPetición de oración:\n' + message
   );
   document.querySelector('#form-status').textContent = 'Se abrirá tu aplicación de correo para que revises y envíes tu petición.';
-  window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+  window.location.href = 'mailto:virtuosas.latam@gmail.com?subject=' + subject + '&body=' + body;
 });
